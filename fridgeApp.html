@@ -186,7 +186,7 @@ for (const product of products) {
         const row = document.createElement("tr");
         row.innerHTML = `<td>${product.name}</td><td>${product.quantity}</td><td>${product.nutriScore ? product.nutriScore.toUpperCase() : 'N/A'}</td><td><button onclick="decreaseQuantity('${product.ean}')">-</button></td>`;
         table.appendChild(row);
-        setNutriScoreColor(row, product.nutriScore);
+        setNutriScoreColor(row, product.nutriScore ? product.nutriScore.toUpperCase() : 'N/A');
 
     } else { // Remove product from database if quantity is 0
         objectStore.delete(product.ean);
