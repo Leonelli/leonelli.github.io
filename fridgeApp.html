@@ -42,12 +42,12 @@
             <label>BarCode:</label>
             <pre><code id="result"></code></pre>
             <label>Product Name:</label>
-            <pre> <code id="result2"></code></pre>
-
+            <pre><code id="result2"></code></pre>
+            <a class="button" id="addButton">Add to the fridge</a>
+            <br/>
 
             <label>Fridge:</label>
             <pre><code id="table"></code></pre>
-            <a class="button" id="addButton">Add to the fridge</a>
 
 
 
@@ -61,6 +61,7 @@
 
         let ean_code
         let product_name
+        let nutri_score
 
         print_fride()
 
@@ -95,13 +96,13 @@
             // Creare una tabella HTML per visualizzare i prodotti
             const table = document.createElement("table");
             const headerRow = document.createElement("tr");
-            headerRow.innerHTML = "<th>Nome</th><th>Quantità</th><th></th>";
+            headerRow.innerHTML = "<th>Nome</th><th>Quantità</th><th>Score</th><th></th>";
             table.appendChild(headerRow);
 
             for (const product of products) {
                 if (product.quantity > 0) { // Check if quantity is greater than 0
                     const row = document.createElement("tr");
-                    row.innerHTML = `<td>${product.name}</td><td>${product.quantity}</td><td><button onclick="decreaseQuantity('${product.ean}')">-</button></td>`;
+                    row.innerHTML = `<td>${product.name}</td><td>${product.quantity}</td><td>${product.nutriScore.toUpperCase()}</td><td><button onclick="decreaseQuantity('${product.ean}')">-</button></td>`;
                     table.appendChild(row);
                 } else { // Remove product from database if quantity is 0
                     objectStore.delete(product.ean);
@@ -148,6 +149,18 @@ function decreaseQuantity(ean) {
 }
 
 
+     async function identifyNutriScore(ean) {
+              const url = `https://world.openfoodfacts.org/api/v0/product/${ean}.json`;
+              const response = await fetch(url);
+              if (response.status === 200) {
+                const data = await response.json();
+                const productData = data.product || {};
+                console.log(productData.nutriscore_grade)
+                return productData.nutriscore_grade || 'N/A';
+
+              }
+              return 'N/A';
+            }
 
 
         async function identifyProduct(ean) {
@@ -162,6 +175,7 @@ function decreaseQuantity(ean) {
         }
 
         window.addEventListener('load', function () {
+            document.getElementById('addButton').style.display = 'none';
             const dbName = "product_db";
             const request = indexedDB.open(dbName, 1);
 
@@ -170,6 +184,8 @@ function decreaseQuantity(ean) {
                 const objectStore = db.createObjectStore("products", { keyPath: "ean" });
                 objectStore.createIndex("name", "name", { unique: false });
                 objectStore.createIndex("quantity", "quantity", { unique: false });
+                objectStore.createIndex("nutriScore", "nutriScore", { unique: false });
+
             };
 
 
@@ -198,10 +214,20 @@ function decreaseQuantity(ean) {
                     }
 
                     document.getElementById('startButton').addEventListener('click', () => {
+                        document.getElementById('video').style.display = 'block';
+
                         codeReader.decodeOnceFromVideoDevice(selectedDeviceId, 'video').then((result) => {
                             console.log(result)
                             ean_code = result.text
                             document.getElementById('result').textContent = result.text
+                            identifyNutriScore(result)
+                            .then(result =>{
+                                nutri_score = result
+                                }
+                            )
+                            .catch(error => {
+                                console.error(error);
+                              });
                             identifyProduct(result)
                               .then(result => {
                                 document.getElementById("result2").textContent = result;
@@ -210,11 +236,17 @@ function decreaseQuantity(ean) {
                               .catch(error => {
                                 console.error(error);
                               });
+                            // Hide the video element
+                            document.getElementById('video').style.display = 'none';
+                            document.getElementById('addButton').style.display = 'block';
+                            document.getElementById('result').style.display = 'block';
+                        document.getElementById('result2').style.display = 'block';
                         }).catch((err) => {
                             console.error(err)
                             document.getElementById('result').textContent = err
                         })
                         console.log(`Started continous decode from camera with id ${selectedDeviceId}`)
+
                     })
 
 
@@ -226,20 +258,26 @@ function decreaseQuantity(ean) {
                         console.log('Reset.')
                         print_fride()
 
+                        document.getElementById('video').style.display = 'none';
+                        document.getElementById('addButton').style.display = 'none';
+                        document.getElementById('result').style.display = 'none';
+                        document.getElementById('result2').style.display = 'none';
+
                     })
 
 
                     document.getElementById('addButton').addEventListener('click', () => {
-
                         // Aprire il database
-const dbName = "product_db";
-const request = indexedDB.open(dbName, 1);
+                        const dbName = "product_db";
+                        const request = indexedDB.open(dbName, 1);
 
-request.onupgradeneeded = function(event) {
+                        request.onupgradeneeded = function(event) {
                     const db = event.target.result;
                     const objectStore = db.createObjectStore("products", { keyPath: "ean" });
                     objectStore.createIndex("name", "name", { unique: false });
                     objectStore.createIndex("quantity", "quantity", { unique: false });
+                    objectStore.createIndex("nutriScore", "nutriScore", { unique: false });
+
                 };
 
 request.onerror = function(event) {
@@ -271,7 +309,7 @@ request.onsuccess = function(event) {
           };
       } else {
           // Aggiungere un nuovo prodotto al database
-          const product = {ean: ean_code, name: product_name, quantity: 1};
+          const product = {ean: ean_code, name: product_name, nutriScore:nutri_score, quantity: 1};
           const request = objectStore.add(product);
           if (ean_code && product_name) {
               request.onsuccess = function (event) {
@@ -297,6 +335,11 @@ request.onsuccess = function(event) {
                         console.log('Reset.')
 
                         print_fride()
+                        document.getElementById('addButton').style.display = 'none';
+                        document.getElementById('video').style.display = 'none';
+                        document.getElementById('result').style.display = 'none';
+                        document.getElementById('result2').style.display = 'none';
+
 
                     })
 
