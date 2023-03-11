@@ -191,6 +191,13 @@
 const dbName = "product_db";
 const request = indexedDB.open(dbName, 1);
 
+request.onupgradeneeded = function(event) {
+                    const db = event.target.result;
+                    const objectStore = db.createObjectStore("products", { keyPath: "ean" });
+                    objectStore.createIndex("name", "name", { unique: false });
+                    objectStore.createIndex("quantity", "quantity", { unique: false });
+                };
+
 request.onerror = function(event) {
   console.error("Errore nell'apertura del database", event);
 };
