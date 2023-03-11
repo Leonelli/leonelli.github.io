@@ -79,7 +79,7 @@
         let product_name
         let nutri_score
         let _quantity
-        let sceltaFrigo = true;
+        let sceltaFrigo=true
 
 
         function opzioneSelezionata(inputRadio) {
@@ -465,9 +465,10 @@ function decreaseQuantity(ean) {
                     document.getElementById('addButton').addEventListener('click', () => {
 
                         // Aprire il database
-                      console.log(sceltaFrigo)
-                     if (sceltaFrigo === true) {
-                         const dbName = "product_db";
+                        var radioInputs = document.getElementsByName('opzione');
+
+                        if (radioInputs[0].checked) {
+                        const dbName = "product_db";
                          const request = indexedDB.open(dbName, 1);
 
                          request.onupgradeneeded = function (event) {
@@ -529,7 +530,7 @@ function decreaseQuantity(ean) {
                          };
                      }
 
-                    else if(sceltaFrigo === false){
+                    else if (radioInputs[1].checked) {
                          const dbName = "list_db";
                       const request = indexedDB.open(dbName, 1);
 
