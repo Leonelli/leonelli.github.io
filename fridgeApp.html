@@ -65,6 +65,55 @@
 
         print_fride()
 
+
+        function setNutriScoreColor(row, nutriScore) {
+  let color;
+  let textColor = "#FFF"; // default text color is white
+  switch (nutriScore.toLowerCase()) {
+    case 'a':
+      color = '#008B5E';
+      break;
+    case 'b':
+      color = '#87CEEB';
+      break;
+    case 'c':
+      color = '#FFC107';
+      break;
+    case 'd':
+      color = '#FF8C00';
+      break;
+    case 'e':
+      color = '#E53935';
+      break;
+    default:
+      color = '#FFF';
+      break;
+  }
+  let luminance = 0.2126 * parseInt(color.slice(1,3), 16) + 0.7152 * parseInt(color.slice(3,5), 16) + 0.0722 * parseInt(color.slice(5,7), 16);
+  //if (luminance > 128) {
+  //  textColor = "#000"; // if the background color is light, use black text
+  //  color = colorDarken(color, 0.2); // make the background color slightly darker
+  //} else {
+    textColor = "#000"; // if the background color is dark, use white text
+    color = colorLighten(color, 20); // make the background color slightly lighter
+  //}
+  row.style.backgroundColor = color;
+  row.style.color = textColor;
+}
+
+// utility function to lighten a color by a percentage
+function colorLighten(color, percent) {
+    if (color !== '#FFF') {
+        let num = parseInt(color.slice(1), 16);
+        let amt = Math.round(2.55 * percent);
+        let r = (num >> 16) + amt;
+        let g = (num >> 8 & 0x00FF) + amt;
+        let b = (num & 0x0000FF) + amt;
+        return "#" + (0x1000000 + (r < 255 ? (r < 1 ? 0 : r) : 255) * 0x10000 + (g < 255 ? (g < 1 ? 0 : g) : 255) * 0x100 + (b < 255 ? (b < 1 ? 0 : b) : 255)).toString(16).slice(1);
+    }
+}
+
+
        function print_fride() {
     const dbName = "product_db";
     const request = indexedDB.open(dbName, 1);
@@ -93,6 +142,7 @@
             const products = event.target.result;
             console.log(`Recuperati ${products.length} prodotti dal database`);
 
+            /*
             // Creare una tabella HTML per visualizzare i prodotti
             const table = document.createElement("table");
             const headerRow = document.createElement("tr");
@@ -104,10 +154,50 @@
                     const row = document.createElement("tr");
                     row.innerHTML = `<td>${product.name}</td><td>${product.quantity}</td><td>${product.nutriScore ? product.nutriScore.toUpperCase() : 'N/A'}</td><td><button onclick="decreaseQuantity('${product.ean}')">-</button></td>`;
                     table.appendChild(row);
+                    setNutriScoreColor(row, product.nutriScore);
+
                 } else { // Remove product from database if quantity is 0
                     objectStore.delete(product.ean);
                 }
-            }
+            }*/
+
+            // Create a container div for the table
+const container = document.createElement("div");
+container.style.display = "flex";
+container.style.justifyContent = "center";
+
+// Create the table element and add it to the container
+const table = document.createElement("table");
+const headerRow = document.createElement("tr");
+headerRow.innerHTML = "<th>Nome</th><th>Quantità</th><th>Score</th><th></th>";
+table.appendChild(headerRow);
+
+// Add CSS style to center text in table cells
+const style = document.createElement('style');
+style.innerHTML = `
+  td, th {
+    text-align: center;
+  }
+`;
+document.head.appendChild(style);
+
+for (const product of products) {
+    if (product.quantity > 0) { // Check if quantity is greater than 0
+        const row = document.createElement("tr");
+        row.innerHTML = `<td>${product.name}</td><td>${product.quantity}</td><td>${product.nutriScore ? product.nutriScore.toUpperCase() : 'N/A'}</td><td><button onclick="decreaseQuantity('${product.ean}')">-</button></td>`;
+        table.appendChild(row);
+        setNutriScoreColor(row, product.nutriScore);
+
+    } else { // Remove product from database if quantity is 0
+        objectStore.delete(product.ean);
+    }
+}
+
+// Add the table to the container and append the container to the document
+container.appendChild(table);
+document.body.appendChild(container);
+
+
 
             // Aggiungere la tabella alla pagina HTML
             const resultDiv = document.getElementById("table");
