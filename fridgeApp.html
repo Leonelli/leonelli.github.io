@@ -64,7 +64,7 @@
 
         print_fride()
 
-        function print_fride() {
+       function print_fride() {
     const dbName = "product_db";
     const request = indexedDB.open(dbName, 1);
 
@@ -99,9 +99,13 @@
             table.appendChild(headerRow);
 
             for (const product of products) {
-                const row = document.createElement("tr");
-                row.innerHTML = `<td>${product.name}</td><td>${product.quantity}</td><td><button onclick="decreaseQuantity('${product.ean}')">Decrease</button></td>`;
-                table.appendChild(row);
+                if (product.quantity > 0) { // Check if quantity is greater than 0
+                    const row = document.createElement("tr");
+                    row.innerHTML = `<td>${product.name}</td><td>${product.quantity}</td><td><button onclick="decreaseQuantity('${product.ean}')">Decrease</button></td>`;
+                    table.appendChild(row);
+                } else { // Remove product from database if quantity is 0
+                    objectStore.delete(product.ean);
+                }
             }
 
             // Aggiungere la tabella alla pagina HTML
@@ -142,6 +146,7 @@ function decreaseQuantity(ean) {
         };
     };
 }
+
 
 
 
