@@ -308,6 +308,8 @@ function decreaseQuantity(ean) {
                 product.quantity--;
                 objectStore.put(product);
                 print_fridge(); // Refresh the table to display the updated quantity
+                print_list()
+
             }
         };
 
@@ -439,7 +441,8 @@ function decreaseQuantity(ean) {
                         codeReader.reset();
                         console.log('Reset.')
                         print_fridge()
-                        print_list();
+                        print_list()
+
 
                         document.getElementById('video').style.display = 'none';
                         document.getElementById('addButton').style.display = 'none';
@@ -490,7 +493,7 @@ function decreaseQuantity(ean) {
                                      _quantity = document.getElementById("quantity").value;
                                      console.log("_quantity" + _quantity);
                                      const quantity = parseInt(_quantity);
-                                     existingProduct.quantity += quantity;
+                                     existingProduct.quantity =  parseInt(existingProduct.quantity) + parseInt(quantity);
                                      const request = objectStore.put(existingProduct);
                                      request.onsuccess = function (event) {
                                          console.log("Quantità del prodotto aggiornata correttamente nel database");
@@ -506,7 +509,7 @@ function decreaseQuantity(ean) {
                                          ean: ean_code,
                                          name: product_name,
                                          nutriScore: nutri_score,
-                                         quantity: _quantity
+                                         quantity: parseInt(_quantity)
                                      };
                                      const request = objectStore.add(product);
                                      if (ean_code && product_name) {
@@ -551,9 +554,9 @@ function decreaseQuantity(ean) {
                           if (existingProduct && existingProduct.ean === ean_code) {
                               // Incrementare la quantità del prodotto esistente
                               _quantity = document.getElementById("quantity").value;
-                              console.log("_quantity" + _quantity);
+                              console.log("_quantity:" + _quantity);
                               const quantity = parseInt(_quantity);
-                              existingProduct.quantity +=quantity;
+                              existingProduct.quantity =  parseInt(existingProduct.quantity) + parseInt(quantity);
                               const request = objectStore.put(existingProduct);
                               request.onsuccess = function (event) {
                                   console.log("Quantità del prodotto aggiornata correttamente nel database");
@@ -564,8 +567,8 @@ function decreaseQuantity(ean) {
                           } else {
                               // Aggiungere un nuovo prodotto al database
                                _quantity = document.getElementById("quantity").value;
-                              console.log("_quantity" + _quantity);
-                              const product = {ean: ean_code, name: product_name, nutriScore:nutri_score, quantity: _quantity};
+                              console.log("_quantity:" + _quantity);
+                              const product = {ean: ean_code, name: product_name, nutriScore:nutri_score, quantity: parseInt(_quantity)};
                               const request = objectStore.add(product);
                               if (ean_code && product_name) {
                                   request.onsuccess = function (event) {
@@ -592,7 +595,8 @@ function decreaseQuantity(ean) {
                         console.log('Reset.')
 
                         print_fridge()
-                        print_list();
+                        print_list()
+
                         document.getElementById('addButton').style.display = 'none';
                         document.getElementById('video').style.display = 'none';
                         document.getElementById('result').style.display = 'none';
