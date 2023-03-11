@@ -27,6 +27,17 @@
             <div>
                 <a class="button" id="startButton">Start</a>
                 <a class="button" id="resetButton">Reset</a>
+
+                <label>
+                  <input type="radio" name="opzione" id="opzione1" value="opzione1" onchange="opzioneSelezionata(this)" checked>
+                  Add to Fridge
+                </label>
+
+                <label>
+                  <input type="radio" name="opzione" id="opzione2" value="opzione2" onchange="opzioneSelezionata(this)">
+                  Add to List
+                </label>
+
             </div>
 
             <div>
@@ -51,6 +62,9 @@
             <label>Fridge:</label>
             <pre><code id="table"></code></pre>
 
+             <label>Wish List:</label>
+            <pre><code id="lista"></code></pre>
+
 
 
         </section>
@@ -65,8 +79,29 @@
         let product_name
         let nutri_score
         let _quantity
+        let sceltaFrigo = true;
 
-        print_fride()
+
+        function opzioneSelezionata(inputRadio) {
+          if (inputRadio.id === "opzione1") {
+            // Aggiungi al frigorifero
+            console.log("Aggiungi al frigorifero",sceltaFrigo );
+              sceltaFrigo = true;
+
+          } else if (inputRadio.id === "opzione2") {
+            // Aggiungi alla lista
+            console.log("Aggiungi alla lista", sceltaFrigo);
+              sceltaFrigo = false;
+
+          }
+        }
+
+
+        print_fridge()
+        print_list()
+
+
+
 
 
         function setNutriScoreColor(row, nutri_score_) {
@@ -117,7 +152,48 @@ function colorLighten(color, percent) {
 }
 
 
-       function print_fride() {
+       function print_list() {
+           const dbName = "list_db";
+           const request = indexedDB.open(dbName, 1);
+
+           request.onupgradeneeded = function (event) {
+               const db = event.target.result;
+               const objectStore = db.createObjectStore("products", {keyPath: "ean"});
+               objectStore.createIndex("name", "name", {unique: false});
+               objectStore.createIndex("quantity", "quantity", {unique: false});
+           };
+
+           request.onsuccess = function (event) {
+               const db = event.target.result;
+
+               // Assicurati che l'object store sia stato creato con successo
+               if (db.objectStoreNames.contains('products')) {
+
+                   // Esegui la transazione con l'object store "products"
+                   const transaction = db.transaction("products", "readonly");
+                   const objectStore = transaction.objectStore("products");
+                   const list = document.createElement("ul");
+
+                   objectStore.openCursor().onsuccess = function (event) {
+                       const cursor = event.target.result;
+                       if (cursor) {
+                           const productName = cursor.value.name;
+                           const listItem = document.createElement("li");
+                           listItem.textContent = productName + "("+cursor.value.quantity+")";
+                           list.appendChild(listItem);
+                           cursor.continue();
+                       } else {
+                           // Aggiungere la tabella alla pagina HTML
+                           const resultDiv = document.getElementById("lista");
+                           resultDiv.appendChild(list);
+                       }
+                   };
+               }
+           };
+       }
+
+
+       function print_fridge() {
     const dbName = "product_db";
     const request = indexedDB.open(dbName, 1);
 
@@ -165,40 +241,40 @@ function colorLighten(color, percent) {
             }*/
 
             // Create a container div for the table
-const container = document.createElement("div");
-container.style.display = "flex";
-container.style.justifyContent = "center";
+            const container = document.createElement("div");
+            container.style.display = "flex";
+            container.style.justifyContent = "center";
 
-// Create the table element and add it to the container
-const table = document.createElement("table");
-const headerRow = document.createElement("tr");
-headerRow.innerHTML = "<th>Nome</th><th>Quantità</th><th>Score</th><th></th>";
-table.appendChild(headerRow);
+            // Create the table element and add it to the container
+            const table = document.createElement("table");
+            const headerRow = document.createElement("tr");
+            headerRow.innerHTML = "<th>Nome</th><th>Quantità</th><th>Score</th><th></th>";
+            table.appendChild(headerRow);
 
-// Add CSS style to center text in table cells
-const style = document.createElement('style');
-style.innerHTML = `
-  td, th {
-    text-align: center;
-  }
-`;
-document.head.appendChild(style);
+            // Add CSS style to center text in table cells
+            const style = document.createElement('style');
+            style.innerHTML = `
+              td, th {
+                text-align: center;
+              }
+            `;
+            document.head.appendChild(style);
 
-for (const product of products) {
-    if (product.quantity > 0) { // Check if quantity is greater than 0
-        const row = document.createElement("tr");
-        row.innerHTML = `<td>${product.name}</td><td>${product.quantity}</td><td>${product.nutriScore ? product.nutriScore.toUpperCase() : 'N/A'}</td><td><button onclick="decreaseQuantity('${product.ean}')">-</button></td>`;
-        table.appendChild(row);
-        setNutriScoreColor(row, product.nutriScore ? product.nutriScore.toUpperCase() : 'N/A');
+            for (const product of products) {
+                if (product.quantity > 0) { // Check if quantity is greater than 0
+                    const row = document.createElement("tr");
+                    row.innerHTML = `<td>${product.name}</td><td>${product.quantity}</td><td>${product.nutriScore ? product.nutriScore.toUpperCase() : 'N/A'}</td><td><button onclick="decreaseQuantity('${product.ean}')">-</button></td>`;
+                    table.appendChild(row);
+                    setNutriScoreColor(row, product.nutriScore ? product.nutriScore.toUpperCase() : 'N/A');
 
-    } else { // Remove product from database if quantity is 0
-        objectStore.delete(product.ean);
-    }
-}
+                } else { // Remove product from database if quantity is 0
+                    objectStore.delete(product.ean);
+                }
+            }
 
-// Add the table to the container and append the container to the document
-container.appendChild(table);
-document.body.appendChild(container);
+            // Add the table to the container and append the container to the document
+            container.appendChild(table);
+            document.body.appendChild(container);
 
 
 
@@ -231,7 +307,8 @@ function decreaseQuantity(ean) {
             if (product) {
                 product.quantity--;
                 objectStore.put(product);
-                print_fride(); // Refresh the table to display the updated quantity
+                print_fridge(); // Refresh the table to display the updated quantity
+                print_list();
             }
         };
 
@@ -279,6 +356,17 @@ function decreaseQuantity(ean) {
                 objectStore.createIndex("quantity", "quantity", { unique: false });
                 objectStore.createIndex("nutriScore", "nutriScore", { unique: false });
 
+            };
+
+            const dbName2 = "list_db";
+            const request2 = indexedDB.open(dbName2, 1);
+
+            request2.onupgradeneeded = function (event) {
+                const db2 = event.target.result;
+                const objectStore2 = db2.createObjectStore("products", { keyPath: "ean" });
+                objectStore2.createIndex("name", "name", { unique: false });
+                objectStore2.createIndex("quantity", "quantity", { unique: false });
+                objectStore2.createIndex("nutriScore", "nutriScore", { unique: false });
             };
 
 
@@ -346,10 +434,13 @@ function decreaseQuantity(ean) {
                     document.getElementById('resetButton').addEventListener('click', () => {
                         document.getElementById('result').textContent = '';
                         document.getElementById('result2').textContent = '';
+                        document.getElementById('quantity').value = 1;
+
 
                         codeReader.reset();
                         console.log('Reset.')
-                        print_fride()
+                        print_fridge()
+                        print_list();
 
                         document.getElementById('video').style.display = 'none';
                         document.getElementById('addButton').style.display = 'none';
@@ -359,71 +450,140 @@ function decreaseQuantity(ean) {
                     })
 
 
+
+                    function createObjectStore(db) {
+                          const objectStore = db.createObjectStore("products", { keyPath: "ean" });
+                          objectStore.createIndex("name", "name", { unique: false });
+                          objectStore.createIndex("quantity", "quantity", { unique: false });
+                          objectStore.createIndex("nutriScore", "nutriScore", { unique: false });
+                        }
+
+
+
                     document.getElementById('addButton').addEventListener('click', () => {
+
                         // Aprire il database
-                        const dbName = "product_db";
-                        const request = indexedDB.open(dbName, 1);
+                      console.log(sceltaFrigo)
+                     if (sceltaFrigo === true) {
+                         const dbName = "product_db";
+                         const request = indexedDB.open(dbName, 1);
 
-                        request.onupgradeneeded = function(event) {
-                    const db = event.target.result;
-                    const objectStore = db.createObjectStore("products", { keyPath: "ean" });
-                    objectStore.createIndex("name", "name", { unique: false });
-                    objectStore.createIndex("quantity", "quantity", { unique: false });
-                    objectStore.createIndex("nutriScore", "nutriScore", { unique: false });
+                         request.onupgradeneeded = function (event) {
+                             const db = event.target.result;
+                             createObjectStore(db);
+                         };
 
-                };
+                         request.onsuccess = function (event) {
+                             const db = event.target.result;
+                             console.log("Database aperto correttamente");
 
-request.onerror = function(event) {
-  console.error("Errore nell'apertura del database", event);
-};
+                             // Verificare se il prodotto esiste già nel database
+                             const transaction = db.transaction(["products"], "readwrite");
+                             const objectStore = transaction.objectStore("products");
+                             const index = objectStore.index("name");
+                             const request = index.get(product_name);
 
-request.onsuccess = function(event) {
-  const db = event.target.result;
-  console.log("Database aperto correttamente");
+                             request.onsuccess = function (event) {
+                                 const existingProduct = event.target.result;
+                                 console.log(ean_code, product_name);
+                                 if (existingProduct && existingProduct.ean === ean_code) {
+                                     // Incrementare la quantità del prodotto esistente
+                                     _quantity = document.getElementById("quantity").value;
+                                     console.log("_quantity" + _quantity);
+                                     const quantity = parseInt(_quantity);
+                                     existingProduct.quantity += quantity;
+                                     const request = objectStore.put(existingProduct);
+                                     request.onsuccess = function (event) {
+                                         console.log("Quantità del prodotto aggiornata correttamente nel database");
+                                     };
+                                     request.onerror = function (event) {
+                                         console.error("Errore nell'aggiornamento della quantità del prodotto nel database", event);
+                                     };
+                                 } else {
+                                     // Aggiungere un nuovo prodotto al database
+                                     _quantity = document.getElementById("quantity").value;
+                                     console.log("_quantity" + _quantity);
+                                     const product = {
+                                         ean: ean_code,
+                                         name: product_name,
+                                         nutriScore: nutri_score,
+                                         quantity: _quantity
+                                     };
+                                     const request = objectStore.add(product);
+                                     if (ean_code && product_name) {
+                                         request.onsuccess = function (event) {
+                                             console.log("Prodotto aggiunto correttamente al database");
+                                         };
+                                         request.onerror = function (event) {
+                                             console.error("Errore nell'aggiunta del prodotto al database", event);
+                                         };
+                                     }
+                                 }
+                             };
 
-  // Verificare se il prodotto esiste già nel database
-  const transaction = db.transaction(["products"], "readwrite");
-  const objectStore = transaction.objectStore("products");
-  const index = objectStore.index("name");
-  const request = index.get(product_name);
+                             request.onerror = function (event) {
+                                 console.error("Errore nella verifica dell'esistenza del prodotto nel database", event);
+                             };
+                         };
+                     }
 
-  request.onsuccess = function(event) {
-      const existingProduct = event.target.result;
-      console.log(ean_code,product_name);
-      if (existingProduct && existingProduct.ean === ean_code) {
-          // Incrementare la quantità del prodotto esistente
-          _quantity = document.getElementById("quantity").value;
-          console.log("_quantity" + _quantity);
-          const quantity = parseInt(_quantity);
-          existingProduct.quantity +=quantity;
-          const request = objectStore.put(existingProduct);
-          request.onsuccess = function (event) {
-              console.log("Quantità del prodotto aggiornata correttamente nel database");
-          };
-          request.onerror = function (event) {
-              console.error("Errore nell'aggiornamento della quantità del prodotto nel database", event);
-          };
-      } else {
-          // Aggiungere un nuovo prodotto al database
-           _quantity = document.getElementById("quantity").value;
-          console.log("_quantity" + _quantity);
-          const product = {ean: ean_code, name: product_name, nutriScore:nutri_score, quantity: _quantity};
-          const request = objectStore.add(product);
-          if (ean_code && product_name) {
-              request.onsuccess = function (event) {
-                  console.log("Prodotto aggiunto correttamente al database");
-              };
-              request.onerror = function (event) {
-                  console.error("Errore nell'aggiunta del prodotto al database", event);
-              };
-          }
-      }
-  };
+                    else if(sceltaFrigo === false){
+                         const dbName = "list_db";
+                      const request = indexedDB.open(dbName, 1);
 
-  request.onerror = function(event) {
-    console.error("Errore nella verifica dell'esistenza del prodotto nel database", event);
-  };
-};
+                      request.onupgradeneeded = function(event) {
+                        const db = event.target.result;
+                        createObjectStore(db);
+                      };
+
+                      request.onsuccess = function(event) {
+                        const db = event.target.result;
+                        console.log("Database aperto correttamente");
+
+                        // Verificare se il prodotto esiste già nel database
+                        const transaction = db.transaction(["products"], "readwrite");
+                        const objectStore = transaction.objectStore("products");
+                        const index = objectStore.index("name");
+                        const request = index.get(product_name);
+
+                      request.onsuccess = function(event) {
+                          const existingProduct = event.target.result;
+                          console.log(ean_code,product_name);
+                          if (existingProduct && existingProduct.ean === ean_code) {
+                              // Incrementare la quantità del prodotto esistente
+                              _quantity = document.getElementById("quantity").value;
+                              console.log("_quantity" + _quantity);
+                              const quantity = parseInt(_quantity);
+                              existingProduct.quantity +=quantity;
+                              const request = objectStore.put(existingProduct);
+                              request.onsuccess = function (event) {
+                                  console.log("Quantità del prodotto aggiornata correttamente nel database");
+                              };
+                              request.onerror = function (event) {
+                                  console.error("Errore nell'aggiornamento della quantità del prodotto nel database", event);
+                              };
+                          } else {
+                              // Aggiungere un nuovo prodotto al database
+                               _quantity = document.getElementById("quantity").value;
+                              console.log("_quantity" + _quantity);
+                              const product = {ean: ean_code, name: product_name, nutriScore:nutri_score, quantity: _quantity};
+                              const request = objectStore.add(product);
+                              if (ean_code && product_name) {
+                                  request.onsuccess = function (event) {
+                                      console.log("Prodotto aggiunto correttamente al database");
+                                  };
+                                  request.onerror = function (event) {
+                                      console.error("Errore nell'aggiunta del prodotto al database", event);
+                                  };
+                              }
+                          }
+                      };
+
+                      request.onerror = function(event) {
+                        console.error("Errore nella verifica dell'esistenza del prodotto nel database", event);
+                      };
+                    };
+                     }
 
 
                          document.getElementById('result').textContent = '';
@@ -432,7 +592,8 @@ request.onsuccess = function(event) {
                         codeReader.reset();
                         console.log('Reset.')
 
-                        print_fride()
+                        print_fridge()
+                        print_list();
                         document.getElementById('addButton').style.display = 'none';
                         document.getElementById('video').style.display = 'none';
                         document.getElementById('result').style.display = 'none';
