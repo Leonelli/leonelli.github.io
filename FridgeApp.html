@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>Fridge App</title>
+
+    <link rel="stylesheet" rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+    <link rel="stylesheet" rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://unpkg.com/milligram@1.3.0/dist/milligram.min.css">
+</head>
+
+<body>
+
+    <main class="wrapper" style="padding-top:2em">
+
+        <section class="container" id="demo-content">
+            <h1 class="title">Scan barcode from Video Camera</h1>
+
+            <p>
+                <a class="button-small button-outline" href="../../index.html">HOME 🏡</a>
+            </p>
+
+            <div>
+                <a class="button" id="startButton">Start</a>
+                <a class="button" id="resetButton">Reset</a>
+            </div>
+
+            <div>
+                <video id="video" width="300" height="200" style="border: 1px solid gray"></video>
+            </div>
+
+            <div id="sourceSelectPanel" style="display:none">
+                <label for="sourceSelect">Change video source:</label>
+                <select id="sourceSelect" style="max-width:400px">
+                </select>
+            </div>
+
+            <label>BarCode:</label>
+            <pre><code id="result"></code></pre>
+            <label>Product Name:</label>
+            <pre> <code id="result2"></code></pre>
+
+
+            <label>Fridge:</label>
+            <pre><code id="table"></code></pre>
+            <a class="button" id="addButton">Add to the fridge</a>
+
+
+
+        </section>
+
+
+    </main>
+
+    <script type="text/javascript" src="https://unpkg.com/@zxing/library@latest"></script>
+    <script type="text/javascript">
+
+        let ean_code
+        let product_name
+
+        print_fride()
+
+        function print_fride() {
+                const dbName = "product_db";
+                const request = indexedDB.open(dbName, 1);
+
+                request.onupgradeneeded = function(event) {
+                    const db = event.target.result;
+                    const objectStore = db.createObjectStore("products", { keyPath: "ean" });
+                    objectStore.createIndex("name", "name", { unique: false });
+                    objectStore.createIndex("quantity", "quantity", { unique: false });
+                };
+
+                request.onerror = function (event) {
+                    console.error("Errore nell'apertura del database", event);
+                };
+                request.onsuccess = function (event) {
+
+
+                    const db = event.target.result;
+                    console.log("Database aperto correttamente");
+
+                    // Recuperare tutti i prodotti dal database
+                    const transaction = db.transaction(["products"], "readonly");
+                    const objectStore = transaction.objectStore("products");
+                    const request = objectStore.getAll();
+
+                    request.onsuccess = function (event) {
+                        const products = event.target.result;
+                        console.log(`Recuperati ${products.length} prodotti dal database`);
+
+                        // Creare una tabella HTML per visualizzare i prodotti
+                        const table = document.createElement("table");
+                        const headerRow = document.createElement("tr");
+                        //headerRow.innerHTML = "<th>EAN</th><th>Nome</th><th>Quantità</th>";
+                        headerRow.innerHTML = "<th>Nome</th><th>Quantità</th>";
+                        table.appendChild(headerRow);
+
+                        for (const product of products) {
+                            const row = document.createElement("tr");
+                            //row.innerHTML = `<td>${product.ean}</td><td>${product.name}</td><td>${product.quantity}</td>`;
+                            row.innerHTML = `<td>${product.name}</td><td>${product.quantity}</td>`;
+                            table.appendChild(row);
+                        }
+
+                        // Aggiungere la tabella alla pagina HTML
+                        const resultDiv = document.getElementById("table");
+                        resultDiv.innerHTML = "";
+                        resultDiv.appendChild(table);
+                    };
+
+                    request.onerror = function (event) {
+                        console.error("Errore nel recupero dei prodotti dal database", event);
+                    };
+                };
+            }
+
+
+        async function identifyProduct(ean) {
+          const url = `https://world.openfoodfacts.org/api/v0/product/${ean}.json`;
+          const response = await fetch(url);
+          if (response.status === 200) {
+            const data = await response.json();
+            const productData = data.product || {};
+            return productData.product_name || 'N/A';
+          }
+          return 'N/A';
+        }
+
+        window.addEventListener('load', function () {
+            let selectedDeviceId;
+            const codeReader = new ZXing.BrowserBarcodeReader()
+            console.log('ZXing code reader initialized')
+            codeReader.getVideoInputDevices()
+                .then((videoInputDevices) => {
+                    const sourceSelect = document.getElementById('sourceSelect')
+                    selectedDeviceId = videoInputDevices[0].deviceId
+                    if (videoInputDevices.length > 1) {
+                        videoInputDevices.forEach((element) => {
+                            const sourceOption = document.createElement('option')
+                            sourceOption.text = element.label
+                            sourceOption.value = element.deviceId
+                            sourceSelect.appendChild(sourceOption)
+                        })
+
+                        sourceSelect.onchange = () => {
+                            selectedDeviceId = sourceSelect.value;
+                        }
+
+                        const sourceSelectPanel = document.getElementById('sourceSelectPanel')
+                        sourceSelectPanel.style.display = 'block'
+                    }
+
+                    document.getElementById('startButton').addEventListener('click', () => {
+                        codeReader.decodeOnceFromVideoDevice(selectedDeviceId, 'video').then((result) => {
+                            console.log(result)
+                            ean_code = result.text
+                            document.getElementById('result').textContent = result.text
+                            identifyProduct(result)
+                              .then(result => {
+                                document.getElementById("result2").textContent = result;
+                                product_name=result
+                              })
+                              .catch(error => {
+                                console.error(error);
+                              });
+                        }).catch((err) => {
+                            console.error(err)
+                            document.getElementById('result').textContent = err
+                        })
+                        console.log(`Started continous decode from camera with id ${selectedDeviceId}`)
+                    })
+
+
+                    document.getElementById('resetButton').addEventListener('click', () => {
+                        document.getElementById('result').textContent = '';
+                        document.getElementById('result2').textContent = '';
+
+                        codeReader.reset();
+                        console.log('Reset.')
+                        print_fride()
+
+                    })
+
+
+                    document.getElementById('addButton').addEventListener('click', () => {
+
+                        // Aprire il database
+const dbName = "product_db";
+const request = indexedDB.open(dbName, 1);
+
+request.onupgradeneeded = function(event) {
+                    const db = event.target.result;
+                    const objectStore = db.createObjectStore("products", { keyPath: "ean" });
+                    objectStore.createIndex("name", "name", { unique: false });
+                    objectStore.createIndex("quantity", "quantity", { unique: false });
+                };
+
+request.onerror = function(event) {
+  console.error("Errore nell'apertura del database", event);
+};
+
+request.onsuccess = function(event) {
+  const db = event.target.result;
+  console.log("Database aperto correttamente");
+
+  // Verificare se il prodotto esiste già nel database
+  const transaction = db.transaction(["products"], "readwrite");
+  const objectStore = transaction.objectStore("products");
+  const index = objectStore.index("name");
+  const request = index.get(product_name);
+
+  request.onsuccess = function(event) {
+      const existingProduct = event.target.result;
+      console.log(ean_code,product_name);
+      if (existingProduct && existingProduct.ean === ean_code) {
+          // Incrementare la quantità del prodotto esistente
+          existingProduct.quantity++;
+          const request = objectStore.put(existingProduct);
+          request.onsuccess = function (event) {
+              console.log("Quantità del prodotto aggiornata correttamente nel database");
+          };
+          request.onerror = function (event) {
+              console.error("Errore nell'aggiornamento della quantità del prodotto nel database", event);
+          };
+      } else {
+          // Aggiungere un nuovo prodotto al database
+          const product = {ean: ean_code, name: product_name, quantity: 1};
+          const request = objectStore.add(product);
+          if (ean_code && product_name) {
+              request.onsuccess = function (event) {
+                  console.log("Prodotto aggiunto correttamente al database");
+              };
+              request.onerror = function (event) {
+                  console.error("Errore nell'aggiunta del prodotto al database", event);
+              };
+          }
+      }
+  };
+
+  request.onerror = function(event) {
+    console.error("Errore nella verifica dell'esistenza del prodotto nel database", event);
+  };
+};
+
+
+                         document.getElementById('result').textContent = '';
+                        document.getElementById('result2').textContent = '';
+
+                        codeReader.reset();
+                        console.log('Reset.')
+
+                        print_fride()
+
+                    })
+
+                })
+                .catch((err) => {
+                    console.error(err)
+                })
+        })
+    </script>
+
+</body>
+
+</html>
