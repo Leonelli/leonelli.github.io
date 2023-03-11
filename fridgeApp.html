@@ -101,7 +101,7 @@
             for (const product of products) {
                 if (product.quantity > 0) { // Check if quantity is greater than 0
                     const row = document.createElement("tr");
-                    row.innerHTML = `<td>${product.name}</td><td>${product.quantity}</td><td><button onclick="decreaseQuantity('${product.ean}')">Decrease</button></td>`;
+                    row.innerHTML = `<td>${product.name}</td><td>${product.quantity}</td><td><button onclick="decreaseQuantity('${product.ean}')">-</button></td>`;
                     table.appendChild(row);
                 } else { // Remove product from database if quantity is 0
                     objectStore.delete(product.ean);
