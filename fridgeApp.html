@@ -65,55 +65,57 @@
         print_fride()
 
         function print_fride() {
-  const dbName = "product_db";
-  const request = indexedDB.open(dbName, 1);
+                const dbName = "product_db";
+                const request = indexedDB.open(dbName, 1);
 
-  request.onerror = function (event) {
-    console.error("Errore nell'apertura del database", event);
-  };
+                request.onupgradeneeded = function(event) {
+                    const db = event.target.result;
+                    const objectStore = db.createObjectStore("products", { keyPath: "ean" });
+                    objectStore.createIndex("name", "name", { unique: false });
+                    objectStore.createIndex("quantity", "quantity", { unique: false });
+                };
 
-  request.onupgradeneeded = function(event) {
-    const db = event.target.result;
-    const objectStore = db.createObjectStore("products", { keyPath: "id" });
-    objectStore.createIndex("name", "name", { unique: false });
-  };
+                request.onerror = function (event) {
+                    console.error("Errore nell'apertura del database", event);
+                };
+                request.onsuccess = function (event) {
 
-  request.onsuccess = function (event) {
-    const db = event.target.result;
-    console.log("Database aperto correttamente");
 
-    // Recuperare tutti i prodotti dal database
-    const transaction = db.transaction(["products"], "readonly");
-    const objectStore = transaction.objectStore("products");
-    const request = objectStore.getAll();
+                    const db = event.target.result;
+                    console.log("Database aperto correttamente");
 
-    request.onsuccess = function (event) {
-      const products = event.target.result;
-      console.log(`Recuperati ${products.length} prodotti dal database`);
+                    // Recuperare tutti i prodotti dal database
+                    const transaction = db.transaction(["products"], "readonly");
+                    const objectStore = transaction.objectStore("products");
+                    const request = objectStore.getAll();
 
-      // Creare una tabella HTML per visualizzare i prodotti
-      const table = document.createElement("table");
-      const headerRow = document.createElement("tr");
-      headerRow.innerHTML = "<th>EAN</th><th>Nome</th><th>Quantità</th>";
-      table.appendChild(headerRow);
+                    request.onsuccess = function (event) {
+                        const products = event.target.result;
+                        console.log(`Recuperati ${products.length} prodotti dal database`);
 
-      for (const product of products) {
-        const row = document.createElement("tr");
-        row.innerHTML = `<td>${product.ean}</td><td>${product.name}</td><td>${product.quantity}</td>`;
-        table.appendChild(row);
-      }
+                        // Creare una tabella HTML per visualizzare i prodotti
+                        const table = document.createElement("table");
+                        const headerRow = document.createElement("tr");
+                        headerRow.innerHTML = "<th>EAN</th><th>Nome</th><th>Quantità</th>";
+                        table.appendChild(headerRow);
 
-      // Aggiungere la tabella alla pagina HTML
-      const resultDiv = document.getElementById("table");
-      resultDiv.innerHTML = "";
-      resultDiv.appendChild(table);
-    };
+                        for (const product of products) {
+                            const row = document.createElement("tr");
+                            row.innerHTML = `<td>${product.ean}</td><td>${product.name}</td><td>${product.quantity}</td>`;
+                            table.appendChild(row);
+                        }
 
-    request.onerror = function (event) {
-      console.error("Errore nel recupero dei prodotti dal database", event);
-    };
-  };
-}
+                        // Aggiungere la tabella alla pagina HTML
+                        const resultDiv = document.getElementById("table");
+                        resultDiv.innerHTML = "";
+                        resultDiv.appendChild(table);
+                    };
+
+                    request.onerror = function (event) {
+                        console.error("Errore nel recupero dei prodotti dal database", event);
+                    };
+                };
+            }
 
 
         async function identifyProduct(ean) {
