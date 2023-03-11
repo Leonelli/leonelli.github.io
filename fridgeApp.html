@@ -162,6 +162,18 @@ function decreaseQuantity(ean) {
         }
 
         window.addEventListener('load', function () {
+            const dbName = "product_db";
+            const request = indexedDB.open(dbName, 1);
+
+            request.onupgradeneeded = function (event) {
+                const db = event.target.result;
+                const objectStore = db.createObjectStore("products", { keyPath: "ean" });
+                objectStore.createIndex("name", "name", { unique: false });
+                objectStore.createIndex("quantity", "quantity", { unique: false });
+            };
+
+
+
             let selectedDeviceId;
             const codeReader = new ZXing.BrowserBarcodeReader()
             console.log('ZXing code reader initialized')
