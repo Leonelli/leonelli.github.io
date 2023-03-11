@@ -43,6 +43,8 @@
             <pre><code id="result"></code></pre>
             <label>Product Name:</label>
             <pre><code id="result2"></code></pre>
+            <div class="quantity-counter"><input id="quantity" type="number" min="0" max="100" value="1" class="quantity"></div>
+
             <a class="button" id="addButton">Add to the fridge</a>
             <br/>
 
@@ -62,6 +64,7 @@
         let ean_code
         let product_name
         let nutri_score
+        let _quantity
 
         print_fride()
 
@@ -389,7 +392,10 @@ request.onsuccess = function(event) {
       console.log(ean_code,product_name);
       if (existingProduct && existingProduct.ean === ean_code) {
           // Incrementare la quantità del prodotto esistente
-          existingProduct.quantity++;
+          _quantity = document.getElementById("quantity").value;
+          console.log("_quantity" + _quantity);
+          const quantity = parseInt(_quantity);
+          existingProduct.quantity +=quantity;
           const request = objectStore.put(existingProduct);
           request.onsuccess = function (event) {
               console.log("Quantità del prodotto aggiornata correttamente nel database");
@@ -399,7 +405,9 @@ request.onsuccess = function(event) {
           };
       } else {
           // Aggiungere un nuovo prodotto al database
-          const product = {ean: ean_code, name: product_name, nutriScore:nutri_score, quantity: 1};
+           _quantity = document.getElementById("quantity").value;
+          console.log("_quantity" + _quantity);
+          const product = {ean: ean_code, name: product_name, nutriScore:nutri_score, quantity: _quantity};
           const request = objectStore.add(product);
           if (ean_code && product_name) {
               request.onsuccess = function (event) {
