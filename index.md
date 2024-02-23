@@ -14,7 +14,7 @@ Currently working as PhD student at CISPA Helmholtz Center for Information Secur
 <!-- >--- -->
 
 >* **`Title`:** Coming Soon 
->* `Description`: Hopfully published soon  
+>* `Description`: Hopefully published soon :)
 >* `Source`: X
 >* `Tags`: [`Security`, `Paper`, `Conference`]
 
@@ -47,7 +47,7 @@ Passionate about software and hardware security staying updated with accademia a
 
 >* TimeLine = [\\
 >  { `year`: 2018 ,`text`: "Completed Technical Highscool in Computer Science 🇮🇹" },\\
->  { `year`: 2021, `text`: "Completed Bachloar in Computer Science 🇮🇹" },\\
+>  { `year`: 2021, `text`: "Completed Bachelor in Computer Science 🇮🇹" },\\
 >  { `year`: 2024, `text`: "Completed Master in Computer Science 🇩🇪" },\\
 >  { `year`: 2024, `text`: "Started as Phd student at CISPA 🇩🇪"}] 
 
