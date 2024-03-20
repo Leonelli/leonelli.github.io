@@ -56,7 +56,7 @@ Passionate about software and hardware security staying updated with academia an
 
 # Achievements
 
->* [FFmpeg PATCH - global-buffer-overflow](https://lists.ffmpeg.org/pipermail/ffmpeg-devel/2023-November/317571.html) 
+>* [FFmpeg PATCH - global-buffer-overflow](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20231130122853.26758-1-michael@niedermayer.cc/) 
 >* [FFmpeg PATCH - attempting free on address which was not malloc ](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20240206212640.9193-1-jamrial@gmail.com/) 
 
 
