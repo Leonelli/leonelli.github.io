@@ -43,19 +43,22 @@ Currently working as PhD student at CISPA Helmholtz Center for Information Secur
 
 # About me
 >* Experienced in Computer Science and Cyber Security with over 5 years of experience. \\
-Passionate about software and hardware security staying updated with accademia and industry trends for innovative solutions.
+Passionate about software and hardware security staying updated with academia and industry trends for innovative solutions.
+
 
 >* TimeLine = [\\
->  { `year`: 2018 ,`text`: "Completed Technical Highscool in Computer Science 🇮🇹" },\\
->  { `year`: 2021, `text`: "Completed Bachelor in Computer Science 🇮🇹" },\\
->  { `year`: 2024, `text`: "Completed Master in Computer Science 🇩🇪" },\\
->  { `year`: 2024, `text`: "Started as Phd student at CISPA 🇩🇪"}] 
+>  { `year`: 2018 ,`text`: "Completed Technical High School in Computer Science 🇮🇹" },\\
+>  { `year`: 2021, `text`: "Completed a Bachelor in Computer Science 🇮🇹" },\\
+>  { `year`: 2024, `text`: "Completed a Master in Computer Science 🇩🇪" },\\
+>  { `year`: 2024, `text`: "Started as PhD student at CISPA 🇩🇪"}] 
 
 ---
 
-# Archivments
+# Achievements
 
->* [FFmpeg PATCH](https://lists.ffmpeg.org/pipermail/ffmpeg-devel/2023-November/317571.html) 
+>* [FFmpeg PATCH - global-buffer-overflow](https://lists.ffmpeg.org/pipermail/ffmpeg-devel/2023-November/317571.html) 
+>* [FFmpeg PATCH - attempting free on address which was not malloc ](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20240206212640.9193-1-jamrial@gmail.com/) 
+
 
 ---
 
@@ -63,6 +66,6 @@ Passionate about software and hardware security staying updated with accademia a
 
 Let's Break Something else! \\
 [LinkedIn](https://www.linkedin.com/in/matteoleonelli/)
-[Mail](mailto:matteoleonelli99@gmail.com)
+[Email](mailto:matteoleonelli99@gmail.com)
 
 ---
