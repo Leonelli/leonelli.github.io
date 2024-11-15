@@ -58,7 +58,7 @@ Passionate about software and hardware security staying updated with academia an
 
 >* [FFmpeg PATCH - global-buffer-overflow](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20231130122853.26758-1-michael@niedermayer.cc/) 
 >* [FFmpeg PATCH - attempting free on address which was not malloc ](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20240206212640.9193-1-jamrial@gmail.com/) 
->* [Intel CVE ](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23919/) , [Acknowledgements](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01132.html)
+>* [Intel CVE](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23919/) - [Acknowledgements](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01132.html)
 
 
 
