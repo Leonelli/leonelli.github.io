@@ -61,6 +61,12 @@ Passionate about software and hardware security staying updated with academia an
 >* [Intel CVE](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23919/) - [Acknowledgements](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01132.html)
 
 
+---
+
+# Events
+>* [Intel Workshop Scalable Assurance](https://www.linkedin.com/pulse/busy-summer-academic-engagements-part-1-research-workshops-jason-fung-zoxic) 
+>* [SBFT 2025](https://sbft25.github.io/organisation/) 
+
 
 ---
 
