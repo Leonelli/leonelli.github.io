@@ -3,7 +3,7 @@ layout: default
 
 ---
 
-An Italian Security Researcher 🇮🇹 focusing in System Security. \\
+An Italian Security Researcher 🇮🇹 focusing on System Security. \\
 Currently working as PhD student at CISPA Helmholtz Center for Information Security in Germany 🇩🇪.
 
 ---
