@@ -15,7 +15,7 @@ Currently working as PhD student at CISPA Helmholtz Center for Information Secur
 
 >* **`Title`:** TwinFuzz: Differential Testing of Video Hardware Acceleration Stacks 
 >* `Description`: TwinFuzz is a differential fuzz-testing approach to identify vulnerabilities in hardware acceleration stacks. We use a software proxy to guide the fuzz testing of the hardware acceleration stack for video decoding.
->* `Source`: [NDSS'2025(soon)][..]
+>* `Source`: [NDSS'2025(accepted)](..)
 >* `Tags`: [`Security`, `Paper`, `Conference`, `NDSS'2025`]
 
 >---
