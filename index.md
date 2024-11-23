@@ -3,7 +3,7 @@ layout: default
 
 ---
 
-An Italian Security Researcher 🇮🇹 specializing in System Security. \\
+An Italian Security Researcher 🇮🇹 focusing in System Security. \\
 Currently working as PhD student at CISPA Helmholtz Center for Information Security in Germany 🇩🇪.
 
 ---
@@ -13,10 +13,10 @@ Currently working as PhD student at CISPA Helmholtz Center for Information Secur
 
 <!-- >--- -->
 
->* **`Title`:** Coming Soon 
->* `Description`: Hopefully published soon :)
->* `Source`: X
->* `Tags`: [`Security`, `Paper`, `Conference`]
+>* **`Title`:** TwinFuzz: Differential Testing of Video Hardware Acceleration Stacks 
+>* `Description`: TwinFuzz is a differential fuzz-testing approach to identify vulnerabilities in hardware acceleration stacks. We use a software proxy to guide the fuzz testing of the hardware acceleration stack for video decoding.
+>* `Source`: [NDSS'2025(soon)][..]
+>* `Tags`: [`Security`, `Paper`, `Conference`, `NDSS'2025`]
 
 >---
 
@@ -47,10 +47,10 @@ Passionate about software and hardware security staying updated with academia an
 
 
 >* TimeLine = [\\
->  { `year`: 2018 ,`text`: "Completed Technical High School in Computer Science 🇮🇹" },\\
->  { `year`: 2021, `text`: "Completed a Bachelor in Computer Science 🇮🇹" },\\
->  { `year`: 2024, `text`: "Completed a Master in Computer Science 🇩🇪" },\\
 >  { `year`: 2024, `text`: "Started as PhD student at CISPA 🇩🇪"}] 
+>  { `year`: 2024, `text`: "Completed a Master in Computer Science 🇩🇪" },\\
+>  { `year`: 2021, `text`: "Completed a Bachelor in Computer Science 🇮🇹" },\\
+>  { `year`: 2018 ,`text`: "Completed Technical High School in Computer Science 🇮🇹" },\\
 
 ---
 
