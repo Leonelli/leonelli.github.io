@@ -47,10 +47,10 @@ Passionate about software and hardware security staying updated with academia an
 
 
 >* TimeLine = [\\
->  { `year`: 2024, `text`: "Started as PhD student at CISPA 🇩🇪"}] 
+>  { `year`: 2024, `text`: "Started as PhD student at CISPA 🇩🇪"}],\\
 >  { `year`: 2024, `text`: "Completed a Master in Computer Science 🇩🇪" },\\
 >  { `year`: 2021, `text`: "Completed a Bachelor in Computer Science 🇮🇹" },\\
->  { `year`: 2018 ,`text`: "Completed Technical High School in Computer Science 🇮🇹" },\\
+>  { `year`: 2018 ,`text`: "Completed Technical High School in Computer Science 🇮🇹" }\\
 
 ---
 
