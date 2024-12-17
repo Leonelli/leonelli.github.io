@@ -15,7 +15,7 @@ Currently working as PhD student at CISPA Helmholtz Center for Information Secur
 
 >* **`Title`:** TwinFuzz: Differential Testing of Video Hardware Acceleration Stacks 
 >* `Description`: TwinFuzz is a differential fuzz-testing approach to identify vulnerabilities in hardware acceleration stacks. We use a software proxy to guide the fuzz testing of the hardware acceleration stack for video decoding.
->* `Source`: [NDSS'2025(accepted)](https://www.ndss-symposium.org/ndss2025/)
+>* `Source`: [NDSS'2025(accepted)](https://github.com/CISPA-SysSec/twinfuzz)
 >* `Tags`: [`Security`, `Paper`, `Conference`, `NDSS'2025`]
 
 >---
@@ -58,14 +58,14 @@ Passionate about software and hardware security staying updated with academia an
 
 >* [FFmpeg PATCH - global-buffer-overflow](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20231130122853.26758-1-michael@niedermayer.cc/) 
 >* [FFmpeg PATCH - attempting free on address which was not malloc ](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20240206212640.9193-1-jamrial@gmail.com/) 
->* [Intel CVE](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23919/) - [Acknowledgements](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01132.html)
+>* [Intel CVE-2024-23919](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23919/) - [Acknowledgements](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01132.html)
 
 
 ---
 
 # Events
 >* [Intel Workshop Scalable Assurance](https://www.linkedin.com/pulse/busy-summer-academic-engagements-part-1-research-workshops-jason-fung-zoxic) 
->* [SBFT 2025](https://sbft25.github.io/organisation/) 
+<!-- >* [SBFT 2025](https://sbft25.github.io/organisation/)  -->
 
 
 ---
