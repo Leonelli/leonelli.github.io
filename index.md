@@ -50,7 +50,8 @@ Passionate about software and hardware security staying updated with academia an
 >  { `year`: 2024, `text`: "Started Cyber Security PhD program (CISPA 🇩🇪)"}],\\
 >  { `year`: 2024, `text`: "Completed Master degree in Cyber Security (Saarland University 🇩🇪)" },\\
 >  { `year`: 2021, `text`: "Completed Bachelor degree in CS (University of Trento 🇮🇹)" },\\
->  { `year`: 2018 ,`text`: "Completed High School degree in CS (Marconi Rovereto 🇮🇹)" }\\
+>  { `year`: 2018 ,`text`: "Completed High School degree in CS (Marconi Rovereto 🇮🇹)" } \\
+]
 
 ---
 
