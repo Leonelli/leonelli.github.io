@@ -11,11 +11,12 @@ Currently working as PhD student at CISPA Helmholtz Center for Information Secur
 # Biography
 <!-- >--- -->
 
-
 Matteo Leonelli is a Ph.D. fellow at the CISPA Helmholtz Center for Information Security, supervised by Prof. Dr. Thorsten Holz. 
 Prior to this, he earned an M.Eng. in Security from Saarland University (2024) and a B.Sc. in Computer Science from Trento University (2021). 
 His research focuses on fuzzing, automated testing, and vulnerability discovery, with a particular emphasis on novel approaches for detecting unusual behaviors and bug categories.
 <!-- He has published several papers in top-tier journals and conferences, such as NDSS... -->
+
+---
 
 # Pubblications
 
