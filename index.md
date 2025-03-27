@@ -9,30 +9,29 @@ Currently working as PhD student at CISPA Helmholtz Center for Information Secur
 ---
 
 
-# Projects
+# Pubblications
 
 <!-- >--- -->
 
 >* **`Title`:** TwinFuzz: Differential Testing of Video Hardware Acceleration Stacks 
 >* `Description`: TwinFuzz is a differential fuzz-testing approach to identify vulnerabilities in hardware acceleration stacks. We use a software proxy to guide the fuzz testing of the hardware acceleration stack for video decoding.
 >* `Source`: [NDSS'2025](https://www.ndss-symposium.org/ndss-paper/twinfuzz-differential-testing-of-video-hardware-acceleration-stacks/)
->* `Tags`: [`Security`, `Paper`, `Conference`, `NDSS'2025`]
+>* `Tags`: [`Security`, `Paper`, `NDSS'2025`]
 
 >---
 
 >* **`Title`:** Secure Pull Printing with QR Codes and National eID Cards: A Software-oriented Design and an Open-source Implementation 
 >* `Description`: We design a software-oriented pull printing infrastructure that supports a print release mechanism using QR codes and electronic IDentity cards as a second-factor authenticator. Our solution addresses the costs, as any medium-size organisation can adopt our open-source solution without additional devices or access badges. 
 >* `Source`: [CODASPY'2021](https://dl.acm.org/doi/10.1145/3422337.3447847)
->* `Tags`: [`Security`, `Paper`, `Conference`, `CODASPY'2021`]
+>* `Tags`: [`Security`, `Paper`, `CODASPY'2021`]
 
 
 
 >---
 
->* **`Title`:** Pull Printing with National eID Cards: An Open-source and Software-oriented Implementation 
->* `Description`: We design a software-oriented pull printing infrastructure that supports a print release mechanism using QR codes and electronic IDentity cards as a second-factor authenticator. Our solution addresses the costs, as any medium-size organisation can adopt our open-source solution without additional devices or access badges. 
+>* **`Title`:** Pull Printing with National eID Cards: An Open-source and Software-oriented Implementation  
 >* `Source`: [ITASEC'2020](https://st.fbk.eu/news/2020/01/07/papers-accepted-at-itasec-2020/)
->* `Tags`: [`Security`, `Paper`, `Conference`, `ITASEC'2020`]
+>* `Tags`: [`Security`, `Paper`, `ITASEC'2020`]
 
 
 
@@ -72,7 +71,7 @@ Passionate about software and hardware security staying updated with academia an
 
 ### Contact me: 
 
-Let's Break Something else! \\
+Let's Break Something Else Together! \\
 [LinkedIn](https://www.linkedin.com/in/matteoleonelli/)
 [Email](mailto:matteoleonelli99@gmail.com)
 [Scholar](https://scholar.google.com/citations?user=3VYW2DwAAAAJ)
