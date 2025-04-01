@@ -55,10 +55,10 @@ Passionate about software and hardware security staying updated with academia an
 
 
 >* TimeLine = [\\
->  { `year`: 2024 - 2027, `text`: "PhD degree in Cyber Security (CISPA 🇩🇪)"}],\\
->  { `year`: 2021 - 2024, `text`: "Master degree in Cyber Security (Saarland University 🇩🇪)" },\\
->  { `year`: 2018 - 2021, `text`: "Bachelor degree in CS (University of Trento 🇮🇹)" },\\
->  { `year`: 2014 - 2018 ,`text`: "High School degree in CS (Marconi Rovereto 🇮🇹)" }]
+>  { `year`: 2024 - Present, `text`: "PhD degree in Cyber Security (CISPA 🇩🇪)"}],\\
+>  { `year`: 2021 - 2024,    `text`: "Master degree in Cyber Security (Saarland University 🇩🇪)" },\\
+>  { `year`: 2018 - 2021,    `text`: "Bachelor degree in CS (University of Trento 🇮🇹)" },\\
+>  { `year`: 2014 - 2018 ,   `text`: "High School degree in CS (Marconi Rovereto 🇮🇹)" }]
 
 ---
 
