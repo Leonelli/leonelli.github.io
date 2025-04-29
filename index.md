@@ -40,14 +40,15 @@ ACM Conference on Data and Application Security and Privacy (CODASPY)\\
 ## 2020
 **Pull Printing with National eID Cards: An Open-source and Software-oriented Implementation**\\
 ***Matteo Leonelli**, Umberto Morelli, Silvio Ranise, Giada Sciarretta*\\
-[[Italain Conference on Cybersecurity (ITASEC)](https://st.fbk.eu/news/2020/01/07/papers-accepted-at-itasec-2020/)]
+Italain Conference on Cybersecurity (ITASEC)
+<!-- (https://st.fbk.eu/news/2020/01/07/papers-accepted-at-itasec-2020/)] -->
 
 ---
 
 
 # About me
 Experienced in Computer Science and Cyber Security with over 5 years of experience. \\
-Passionate about software and hardware security staying updated with academia and industry trends for innovative solutions.\\
+Passionate about software and hardware security staying updated with academia and industry trends for innovative solutions.
 
 
 `year`: 2024 - Present  "PhD degree in Cyber Security (CISPA 🇩🇪)",\\
@@ -61,14 +62,14 @@ Passionate about software and hardware security staying updated with academia an
 
 [FFmpeg PATCH - global-buffer-overflow](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20231130122853.26758-1-michael@niedermayer.cc/) \\
 [FFmpeg PATCH - attempting free on address which was not malloc ](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20240206212640.9193-1-jamrial@gmail.com/) \\
-[Intel CVE-2024-23919](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23919/) - [Acknowledgements](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01132.html)\\
+[Intel CVE-2024-23919](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23919/) - [Acknowledgements](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01132.html)
 
 
 ---
 
 # Events
 [Intel Workshop Scalable Assurance](https://www.linkedin.com/pulse/busy-summer-academic-engagements-part-1-research-workshops-jason-fung-zoxic) \\
-[SBFT 2025](https://sbft25.github.io/organisation/) \\
+[SBFT 2025](https://sbft25.github.io/organisation/) 
 
 
 ---
