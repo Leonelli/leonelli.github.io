@@ -53,11 +53,10 @@ Experienced in Computer Science and Cyber Security with over 5 years of experien
 Passionate about software and hardware security staying updated with academia and industry trends for innovative solutions.\\
 
 
-TimeLine = [\\
-{ `year`: 2024 - Present, `text`: "PhD degree in Cyber Security (CISPA 🇩🇪)"}],\\
-{ `year`: 2021 - 2024,    `text`: "Master degree in Cyber Security (Saarland University 🇩🇪)" },\\
-{ `year`: 2018 - 2021,    `text`: "Bachelor degree in CS (University of Trento 🇮🇹)" },\\
-{ `year`: 2014 - 2018 ,   `text`: "High School degree in CS (Marconi Rovereto 🇮🇹)" }]
+`year`: 2024 - Present  "PhD degree in Cyber Security (CISPA 🇩🇪)",\\
+`year`: 2021 - 2024,    "Master degree in Cyber Security (Saarland University 🇩🇪)",\\
+`year`: 2018 - 2021,    "Bachelor degree in CS (University of Trento 🇮🇹)",\\
+`year`: 2014 - 2018 ,   "High School degree in CS (Marconi Rovereto 🇮🇹)"
 
 ---
 
