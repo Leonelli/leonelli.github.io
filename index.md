@@ -23,22 +23,23 @@ His research focuses on fuzzing, automated testing, and vulnerability discovery,
 <!-- >--- -->
 ---
 2025
-**SBFT Tool Competition 2025 - Fuzzing Track**
-*Addison Crump, _Matteo Leonelli_, Sahil Sihag*
-Workshop on Search-Based and Fuzz Testing (SBFT)
-[[pdf](https://conf.researchr.org/details/icse-2025/sbft-2025-papers/20/SBFT-Tool-Competition-2025-Fuzzing-Track)]
+
+**SBFT Tool Competition 2025 - Fuzzing Track**\\
+*Addison Crump, _Matteo Leonelli_, Sahil Sihag*\\
+Workshop on Search-Based and Fuzz Testing (SBFT)\\
+[[pdf](https://conf.researchr.org/details/icse-2025/sbft-2025-papers/20/SBFT-Tool-Competition-2025-Fuzzing-Track)]\\
 
 
-**TwinFuzz: Differential Testing of Video Hardware Acceleration Stacks** 
-*_Matteo Leonelli_, Addison Crump, Meng Wang, Florian Bauckholt, Keno Hassler, Ali Abbasi, Thorsten Holz*
-Network and Distributed System Security Symposium (NDSS) 
-[[pdf](https://dx.doi.org/10.14722/ndss.2025.240526)], [[code](https://github.com/CISPA-SysSec/twinfuzz)]
+**TwinFuzz: Differential Testing of Video Hardware Acceleration Stacks** \\
+*_Matteo Leonelli_, Addison Crump, Meng Wang, Florian Bauckholt, Keno Hassler, Ali Abbasi, Thorsten Holz*\\
+Network and Distributed System Security Symposium (NDSS) \\
+[[pdf](https://dx.doi.org/10.14722/ndss.2025.240526)], [[code](https://github.com/CISPA-SysSec/twinfuzz)]\\
 
 
 ---
 2021
 
-**Secure Pull Printing with QR Codes and National eID Cards: A Software-oriented Design and an Open-source Implementation** 
+**Secure Pull Printing with QR Codes and National eID Cards: A Software-oriented Design and an Open-source Implementation** \\
 *_Matteo Leonelli_, Umberto Morelli, Giada Sciarretta, Silvio Ranise*\\
 ACM Conference on Data and Application Security and Privacy (CODASPY)\\
 [[pdf](https://dl.acm.org/doi/10.1145/3422337.3447847)], [[code](https://github.com/stfbk/pullprinting)]\\
