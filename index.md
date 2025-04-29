@@ -22,7 +22,7 @@ His research focuses on fuzzing, automated testing, and vulnerability discovery,
 
 <!-- >--- -->
 ---
-2025
+#### 2025
 
 **SBFT Tool Competition 2025 - Fuzzing Track**\\
 *Addison Crump, _Matteo Leonelli_, Sahil Sihag*\\
@@ -37,7 +37,7 @@ Network and Distributed System Security Symposium (NDSS) \\
 
 
 ---
-2021
+#### 2021
 
 **Secure Pull Printing with QR Codes and National eID Cards: A Software-oriented Design and an Open-source Implementation** \\
 *_Matteo Leonelli_, Umberto Morelli, Giada Sciarretta, Silvio Ranise*\\
@@ -46,7 +46,7 @@ ACM Conference on Data and Application Security and Privacy (CODASPY)\\
 
 
 ---
-2020
+#### 2020
 
 **Pull Printing with National eID Cards: An Open-source and Software-oriented Implementation**\\
 *_Matteo Leonelli_, Umberto Morelli, Silvio Ranise, Giada Sciarretta*\\
