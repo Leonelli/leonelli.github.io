@@ -1,12 +1,12 @@
----
+<!-- --- -->
 layout: default
 
----
+<!-- --- -->
 
 An Italian Security Researcher 🇮🇹 focusing on System Security. \\
 Currently working as PhD student at CISPA Helmholtz Center for Information Security in Germany 🇩🇪.
 
----
+<!-- --- -->
 
 # Biography
 <!-- >--- -->
@@ -16,7 +16,7 @@ Prior to this, he earned an M.Eng. in Security from Saarland University (2024) a
 His research focuses on fuzzing, automated testing, and vulnerability discovery, with a particular emphasis on novel approaches for detecting unusual behaviors and bug categories.
 <!-- He has published several papers in top-tier journals and conferences, such as NDSS... -->
 
----
+<!-- --- -->
 
 # Pubblications
 
@@ -43,7 +43,7 @@ ACM Conference on Data and Application Security and Privacy (CODASPY)\\
 Italain Conference on Cybersecurity (ITASEC)
 <!-- (https://st.fbk.eu/news/2020/01/07/papers-accepted-at-itasec-2020/)] -->
 
----
+<!-- --- -->
 
 
 # About me
@@ -56,7 +56,7 @@ Passionate about software and hardware security staying updated with academia an
 `year`: 2018 - 2021,    "Bachelor degree in CS (University of Trento 🇮🇹)",\\
 `year`: 2014 - 2018 ,   "High School degree in CS (Marconi Rovereto 🇮🇹)"
 
----
+<!-- --- -->
 
 # Achievements
 
@@ -65,14 +65,14 @@ Passionate about software and hardware security staying updated with academia an
 [Intel CVE-2024-23919](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23919/) - [Acknowledgements](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01132.html)
 
 
----
+<!-- --- -->
 
 # Events
 [Intel Workshop Scalable Assurance](https://www.linkedin.com/pulse/busy-summer-academic-engagements-part-1-research-workshops-jason-fung-zoxic) \\
 [SBFT 2025](https://sbft25.github.io/organisation/) 
 
 
----
+<!-- --- -->
 
 ## Contact me: 
 
@@ -82,4 +82,4 @@ Let's Break Something Else Together! \\
 [Email](mailto:matteoleonelli99@gmail.com)
 [Scholar](https://scholar.google.com/citations?user=3VYW2DwAAAAJ)
 
----
+<!-- --- -->
