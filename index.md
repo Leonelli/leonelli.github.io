@@ -20,9 +20,6 @@ His research focuses on fuzzing, automated testing, and vulnerability discovery,
 
 # Pubblications
 
-<!-- >--- -->
----
-
 ### 2025
 **SBFT Tool Competition 2025 - Fuzzing Track**\\
 *Addison Crump, **Matteo Leonelli**, Sahil Sihag*\\
