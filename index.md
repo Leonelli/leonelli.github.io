@@ -21,36 +21,36 @@ His research focuses on fuzzing, automated testing, and vulnerability discovery,
 # Pubblications
 
 <!-- >--- -->
+>---
+2025
 
->* **`Title`:** SBFT Tool Competition 2025 - Fuzzing Track
->* A. Crump, **M. Leonelli**, S. Sihag
-<!-- >* `Description`: Measuring fuzzer performance by aggregate coverage measurement loses a significant amount of information regarding a fuzzer’s ability to explore a program. We introduced the concept of relcov, an asymmetric similarity metric based on the Tversky index, that allowed us to identify the the relative coverage-finding ability of one fuzzer in terms of another. Seeing that this metric uncovered far greater detail regarding the relationship between fuzzers, we designed a second metric, relscore, suitable for ranking a large number of fuzzers based on the novelty of the edges they discover and the reliability with which they do so. We used relscore as the basis for evaluating the rank of fuzzers during the SBFT’25 competition, and in this report provide a deeper analysis using relcov. -->
->* `Venue`: [ICSE 2025]
+>* **SBFT Tool Competition 2025 - Fuzzing Track**
+>* *Addison Crump, _Matteo Leonelli_, Sahil Sihag*
+>* Workshop on Search-Based and Fuzz Testing
 >* [[pdf](https://conf.researchr.org/details/icse-2025/sbft-2025-papers/20/SBFT-Tool-Competition-2025-Fuzzing-Track)]
 
->---
 
->* **`Title`:** TwinFuzz: Differential Testing of Video Hardware Acceleration Stacks 
-<!-- >* `Description`: TwinFuzz is a differential fuzz-testing approach to identify vulnerabilities in hardware acceleration stacks. We use a software proxy to guide the fuzz testing of the hardware acceleration stack for video decoding. -->
->* **M Leonelli**, A Crump, M Wang, F Bauckholt, K Hassler, A Abbasi, T Holz
->* `Venue`: [NDSS 2025]
+>* **TwinFuzz: Differential Testing of Video Hardware Acceleration Stacks** 
+>* *_Matteo Leonelli_, Addison Crump, Meng Wang, Florian Bauckholt, Keno Hassler, Ali Abbasi, Thorsten Holz*
+>* [NDSS 2025]
 >* [[pdf](https://dx.doi.org/10.14722/ndss.2025.240526)], [[code](https://github.com/CISPA-SysSec/twinfuzz)]
 
 
 >---
+2021
 
->* **`Title`:** Secure Pull Printing with QR Codes and National eID Cards: A Software-oriented Design and an Open-source Implementation 
->* **M Leonelli**, U Morelli, G Sciarretta, S Ranise
-<!-- >* `Description`: We design a software-oriented pull printing infrastructure that supports a print release mechanism using QR codes and electronic IDentity cards as a second-factor authenticator. Our solution addresses the costs, as any medium-size organisation can adopt our open-source solution without additional devices or access badges.  -->
->* `Venue`: CODASPY 2021
+>* **Secure Pull Printing with QR Codes and National eID Cards: A Software-oriented Design and an Open-source Implementation** 
+>* *_Matteo Leonelli_, Umberto Morelli, Giada Sciarretta, Silvio Ranise*
+>* ACM Conference on Data and Application Security and Privacy
 >* [[pdf](https://dl.acm.org/doi/10.1145/3422337.3447847)], [[code](https://github.com/stfbk/pullprinting)]
 
 
-
 >---
+2020
 
->* **`Title`:** Pull Printing with National eID Cards: An Open-source and Software-oriented Implementation  
->* `Venue`: [[ITASEC 2020](https://st.fbk.eu/news/2020/01/07/papers-accepted-at-itasec-2020/)]
+>* **Pull Printing with National eID Cards: An Open-source and Software-oriented Implementation**
+>* *_Matteo Leonelli_, Umberto Morelli, Silvio Ranise, Giada Sciarretta*
+>* [[ITASEC - Italain Conference on Cybersecurity](https://st.fbk.eu/news/2020/01/07/papers-accepted-at-itasec-2020/)]
 
 
 
