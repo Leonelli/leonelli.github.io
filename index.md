@@ -47,7 +47,7 @@ Italain Conference on Cybersecurity (ITASEC)
 
 
 ## About me
-Experienced in Computer Science and Cyber Security with over 5 years of experience. \\
+Experienced in Computer Science and Cyber Security with over 7 years of experience. \\
 Passionate about software and hardware security staying updated with academia and industry trends for innovative solutions.
 
 
