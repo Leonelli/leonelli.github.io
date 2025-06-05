@@ -60,19 +60,19 @@ Passionate about software and hardware security staying updated with academia an
 
 ## Achievements and CVEs
 
-- [Intel CVE-2024-23919 - Improper buffer restrictions in Intel® Graphics software](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23919/) \\
-- [Intel acknowledgements](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01132.html)
-- [FFmpeg - global-buffer-overflow](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20231130122853.26758-1-michael@niedermayer.cc/) \\
-- [FFmpeg - attempting free on address which was not malloc](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20240206212640.9193-1-jamrial@gmail.com/) \\
-- [WordPress - Unauthenticated Arbitrary Options Update](https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/hypercomments/hypercomments-122-unauthenticated-subscriber-arbitrary-options-update) \\
+[Intel CVE-2024-23919 - Improper buffer restrictions in Intel® Graphics software](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23919/) \\
+[Intel acknowledgements](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01132.html)
+[FFmpeg - global-buffer-overflow](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20231130122853.26758-1-michael@niedermayer.cc/) \\
+[FFmpeg - attempting free on address which was not malloc](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20240206212640.9193-1-jamrial@gmail.com/) \\
+[WordPress - Unauthenticated Arbitrary Options Update](https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/hypercomments/hypercomments-122-unauthenticated-subscriber-arbitrary-options-update) \\
 
 
 <!-- --- -->
 
 ## Events
-- [Intel Workshop Scalable Assurance](https://www.linkedin.com/pulse/busy-summer-academic-engagements-part-1-research-workshops-jason-fung-zoxic) \\
-- [SBFT 2025](https://sbft25.github.io/organisation/) \\
-- [EPFL Summer School 2024](https://suri.epfl.ch/?page_id=88) \\
+[Intel Workshop Scalable Assurance](https://www.linkedin.com/pulse/busy-summer-academic-engagements-part-1-research-workshops-jason-fung-zoxic) \\
+[SBFT 2025](https://sbft25.github.io/organisation/) \\
+[EPFL Summer School 2024](https://suri.epfl.ch/?page_id=88) \\
 
 
 <!-- --- -->
