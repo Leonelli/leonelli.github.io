@@ -51,18 +51,20 @@ Experienced in Computer Science and Cyber Security with over 5 years of experien
 Passionate about software and hardware security staying updated with academia and industry trends for innovative solutions.
 
 
-`year`: 2024 - Present  "PhD degree in Cyber Security (CISPA 🇩🇪)",\\
-`year`: 2021 - 2024,    "Master degree in Cyber Security (Saarland University 🇩🇪)",\\
-`year`: 2018 - 2021,    "Bachelor degree in CS (University of Trento 🇮🇹)",\\
-`year`: 2014 - 2018 ,   "High School degree in CS (Marconi Rovereto 🇮🇹)"
+2024 - Present: PhD degree in Cyber Security (CISPA 🇩🇪)"\\
+2021 - 2024: Master degree in Cyber Security (Saarland University 🇩🇪)"\\
+2018 - 2021: Bachelor degree in CS (University of Trento 🇮🇹)"\\
+2014 - 2018: High School degree in CS (Marconi Rovereto 🇮🇹)"
 
 <!-- --- -->
 
-## Achievements
+## Achievements and CVEs
 
-[FFmpeg PATCH - global-buffer-overflow](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20231130122853.26758-1-michael@niedermayer.cc/) \\
-[FFmpeg PATCH - attempting free on address which was not malloc ](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20240206212640.9193-1-jamrial@gmail.com/) \\
-[Intel CVE-2024-23919](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23919/) - [Acknowledgements](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01132.html)
+- [Intel CVE-2024-23919 - Improper buffer restrictions in Intel® Graphics software](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23919/) \\
+- [Intel acknowledgements](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01132.html)
+- [FFmpeg - global-buffer-overflow](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20231130122853.26758-1-michael@niedermayer.cc/) \\
+- [FFmpeg - attempting free on address which was not malloc](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20240206212640.9193-1-jamrial@gmail.com/) \\
+- [WordPress - Unauthenticated Arbitrary Options Update] (https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/hypercomments/hypercomments-122-unauthenticated-subscriber-arbitrary-options-update) \\
 
 
 <!-- --- -->
