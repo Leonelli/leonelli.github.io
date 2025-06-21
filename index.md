@@ -51,10 +51,10 @@ Experienced in Computer Science and Cyber Security with over 7 years of experien
 Passionate about software and hardware security staying updated with academia and industry trends for innovative solutions.
 
 
-2024 - Present: PhD degree in Cyber Security (CISPA 🇩🇪)"\\
-2021 - 2024: Master degree in Cyber Security (Saarland University 🇩🇪)"\\
-2018 - 2021: Bachelor degree in CS (University of Trento 🇮🇹)"\\
-2014 - 2018: High School degree in CS (Marconi Rovereto 🇮🇹)"
+2024 - Present: PhD degree in Cyber Security (CISPA 🇩🇪)\\
+2021 - 2024: Master degree in Cyber Security (Saarland University 🇩🇪)\\
+2018 - 2021: Bachelor degree in CS (University of Trento 🇮🇹)\\
+2014 - 2018: High School degree in CS (Marconi Rovereto 🇮🇹)
 
 <!-- --- -->
 
