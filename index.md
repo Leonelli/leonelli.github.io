@@ -60,12 +60,12 @@ Passionate about software and hardware security staying updated with academia an
 
 ## Achievements and CVEs
 
-[Intel CVE-2024-23919 - Improper buffer restrictions in Intel® Graphics software](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23919/) \\
-[Intel Acknowledgements](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01132.html) \\
-[FFmpeg - global-buffer-overflow](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20231130122853.26758-1-michael@niedermayer.cc/) \\
-[FFmpeg - attempting free on address which was not malloc](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20240206212640.9193-1-jamrial@gmail.com/) \\
-[WordPress - Unauthenticated Arbitrary Options Update](https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/hypercomments/hypercomments-122-unauthenticated-subscriber-arbitrary-options-update)
-
+- [Intel CVE-2024-23919 - Improper buffer restrictions in Intel® Graphics software](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23919/) \\
+- [Intel Acknowledgements](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01132.html) \\
+- [FFmpeg - global-buffer-overflow](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20231130122853.26758-1-michael@niedermayer.cc/) \\
+- [FFmpeg - attempting free on address which was not malloc](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20240206212640.9193-1-jamrial@gmail.com/) \\
+- [WordPress - Unauthenticated Arbitrary Options Update](https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/hypercomments/hypercomments-122-unauthenticated-subscriber-arbitrary-options-update)
+- [WordPress - Missing Authorization to Unauthenticated Arbitrary Post Deletion](https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/nmedia-user-file-uploader/frontend-file-manager-215-missing-authorixation-to-unauthenticated-arbitrary-post-deletion)
 
 <!-- --- -->
 
