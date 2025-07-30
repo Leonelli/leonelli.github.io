@@ -48,19 +48,19 @@ Italain Conference on Cybersecurity (ITASEC)
 
 ## Work Experience
 ### Amazon Applied Scientist Internship - AWS
-Conducted research and developed automated fuzz testing methods to evaluate and ensure data integrity in Amazon S3.
+Research and develop automated fuzz testing methods to evaluate and ensure data integrity in Amazon S3.
 
 ### Ph.D. Candidate at CISPA Helmholtz Center for Information
-Conducting research on functional and security-focused automated fuzz testing for complex system security.
+Research functional and security-focused automated fuzz testing for complex system security.
 
 ### Fondazione Bruno Kessler
-Researched secure protocol communication and contributed to application development.
+Research secure protocol communication and contribute to application development.
 
 ### Matrix Tech
-Developed a web service to manage gate access and presence tracking on embedded system devices.
+Develop a web service to manage gate access and presence tracking on embedded system devices.
 
 ### OGP
-Developed customer-facing websites and integrated new features as part of the web development team.
+Develop customer-facing websites and integrate new features.
 
 ## About me
 Experienced in Computer Science and Cyber Security with over 7 years of experience. \\
