@@ -88,7 +88,7 @@ Passionate about software and hardware security, continuously staying updated wi
 
 ## Events
 
-[Intel Workshop: Scalable Assurance](https://www.linkedin.com/pulse/busy-summer-academic-engagements-part-1-research-workshops-jason-fung-zoxic)\\
+[Intel Workshop: Scalable Assurance 2024](https://www.linkedin.com/pulse/busy-summer-academic-engagements-part-1-research-workshops-jason-fung-zoxic)\\
 [SBFT 2025](https://sbft25.github.io/organisation/)\\
 [EPFL Summer School in System Security 2024](https://suri.epfl.ch/?page_id=88)\\
 [CISPA Summer School in System Security 2023](https://cispa.de/summer-school-2023)\\
