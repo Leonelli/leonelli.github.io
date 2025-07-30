@@ -6,7 +6,7 @@ layout: default
 An Italian Security Researcher 🇮🇹 focusing on System Security. \\
 Currently working as PhD student at CISPA Helmholtz Center for Information Security in Germany 🇩🇪.
 
-<!-- --- -->
+---
 
 ## Biography
 <!-- >--- -->
@@ -16,7 +16,7 @@ Prior to this, he earned an M.Eng. in Security from Saarland University (2024) a
 His research focuses on fuzzing, automated testing, and vulnerability discovery, with a particular emphasis on novel approaches for detecting unusual behaviors and bug categories.
 <!-- He has published several papers in top-tier journals and conferences, such as NDSS... -->
 
-<!-- --- -->
+---
 
 ## Pubblications
 
@@ -43,7 +43,7 @@ ACM Conference on Data and Application Security and Privacy (CODASPY)\\
 Italain Conference on Cybersecurity (ITASEC)
 <!-- (https://st.fbk.eu/news/2020/01/07/papers-accepted-at-itasec-2020/)] -->
 
-<!-- --- -->
+---
 
 
 ## Work Experience
@@ -62,6 +62,8 @@ Develop a web service to manage gate access and presence tracking on embedded sy
 ### OGP
 Develop customer-facing websites and integrate new features.
 
+---
+
 ## About me
 Experienced in Computer Science and Cyber Security with over 7 years of experience. \\
 Passionate about software and hardware security staying updated with academia and industry trends for innovative solutions.
@@ -72,7 +74,7 @@ Passionate about software and hardware security staying updated with academia an
 2018 - 2021: Bachelor degree in CS (University of Trento 🇮🇹)\\
 2014 - 2018: High School degree in CS (Marconi Rovereto 🇮🇹)
 
-<!-- --- -->
+---
 
 ## Achievements and CVEs
 
@@ -83,15 +85,15 @@ Passionate about software and hardware security staying updated with academia an
 - [WordPress: Unauthenticated Arbitrary Options Update](https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/hypercomments/hypercomments-122-unauthenticated-subscriber-arbitrary-options-update)
 - [WordPress: Missing Authorization to Unauthenticated Arbitrary Post Deletion](https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/nmedia-user-file-uploader/frontend-file-manager-215-missing-authorixation-to-unauthenticated-arbitrary-post-deletion)
 
-<!-- --- -->
+---
 
 ## Events
 [Intel Workshop Scalable Assurance](https://www.linkedin.com/pulse/busy-summer-academic-engagements-part-1-research-workshops-jason-fung-zoxic) \\
 [SBFT 2025](https://sbft25.github.io/organisation/) \\
-[EPFL Summer School 2024](https://suri.epfl.ch/?page_id=88)
-
-
-<!-- --- -->
+[EPFL Summer School in System Security 2024](https://suri.epfl.ch/?page_id=88)
+[CISPA Summer School in System Security 2023](https://cispa.de/summer-school-2023)
+[CISPA Summer School Trustworthy Artificial Intelligence 2022](https://cispa.de/en/summer-school-2022)
+---
 
 ### Contact me: 
 
