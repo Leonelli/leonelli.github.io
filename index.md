@@ -92,7 +92,7 @@ Passionate about software and hardware security, continuously staying updated wi
 [SBFT 2025](https://sbft25.github.io/organisation/)\\
 [EPFL Summer School in System Security 2024](https://suri.epfl.ch/?page_id=88)\\
 [CISPA Summer School in System Security 2023](https://cispa.de/summer-school-2023)\\
-[CISPA Summer School: Trustworthy Artificial Intelligence 2022](https://cispa.de/en/summer-school-2022)\\
+[CISPA Summer School in Trustworthy Artificial Intelligence 2022](https://cispa.de/en/summer-school-2022)\\
 [University of Trento School of Innovation 2021](https://www.soi.unitn.it/)
 
 ---
