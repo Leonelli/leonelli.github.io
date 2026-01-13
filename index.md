@@ -81,8 +81,9 @@ Passionate about software and hardware security, continuously staying updated wi
   – [Intel Acknowledgements](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01132.html)
 - [FFmpeg: Global buffer overflow](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20231130122853.26758-1-michael@niedermayer.cc/)
 - [FFmpeg: Attempting free on address which was not malloc’ed](https://patchwork.ffmpeg.org/project/ffmpeg/patch/20240206212640.9193-1-jamrial@gmail.com/)
-- [WordPress: Unauthenticated Arbitrary Options Update](https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/hypercomments/hypercomments-122-unauthenticated-subscriber-arbitrary-options-update)
-- [WordPress: Missing Authorization for Unauthenticated Arbitrary Post Deletion](https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/nmedia-user-file-uploader/frontend-file-manager-215-missing-authorixation-to-unauthenticated-arbitrary-post-deletion)
+- [WordPress CVE-2025-9219: Missing Authorization to Authenticated](https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/post-smtp/post-smtp-341-missing-authorization-to-authenticated-subscriber-limited-plugin-option-update)
+- [WordPress CVE-2025-5701: Unauthenticated Arbitrary Options Update](https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/hypercomments/hypercomments-122-unauthenticated-subscriber-arbitrary-options-update)
+- [WordPress CVE-2023-7306: Missing Authorization for Unauthenticated Arbitrary Post Deletion](https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/nmedia-user-file-uploader/frontend-file-manager-215-missing-authorixation-to-unauthenticated-arbitrary-post-deletion)
 
 ---
 
