@@ -17,6 +17,14 @@ His research focuses on fuzzing, automated testing, and vulnerability discovery,
 
 ## Publications
 
+### 2026
+
+**THEMIS: Context-Aware Grey-box Fuzzing for WordPress Plugins**\\
+**Matteo Leonelli**, *David Jannis Dewes*, *Thorsten Holz*\\
+IEEE European Symposium on Security and Privacy\\
+[[pdf](https://eurosp2026.ieee-security.org/accepted_and_awards.html)], [[code](https://github.com/CISPA-SysSec/themis)]
+
+
 ### 2025
 
 **SBFT Tool Competition 2025 – Fuzzing Track**\\
@@ -87,10 +95,11 @@ Passionate about software and hardware security, continuously staying updated wi
 
 ---
 
-## Events
-
-[Intel Workshop: Scalable Assurance 2024](https://www.linkedin.com/pulse/busy-summer-academic-engagements-part-1-research-workshops-jason-fung-zoxic)\\
+## Mismiscellaneous
+[Fuzzing and Software Security Summer School 2026](https://fuzzingsummerschool.github.io/)\\
+[CISPA Podcast Episode - Black Box Testing with Matteo Leonelli 2025](https://cispa.de/en/TLDR_41)\\
 [SBFT 2025](https://sbft25.github.io/organisation/)\\
+[Intel Workshop: Scalable Assurance 2024](https://www.linkedin.com/pulse/busy-summer-academic-engagements-part-1-research-workshops-jason-fung-zoxic)\\
 [EPFL Summer School in System Security 2024](https://suri.epfl.ch/?page_id=88)\\
 [CISPA Summer School in System Security 2023](https://cispa.de/summer-school-2023)\\
 [CISPA Summer School in Trustworthy Artificial Intelligence 2022](https://cispa.de/en/summer-school-2022)\\
