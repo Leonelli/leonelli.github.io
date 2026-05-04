@@ -20,7 +20,7 @@ His research focuses on fuzzing, automated testing, and vulnerability discovery,
 ### 2026
 
 **THEMIS: Context-Aware Grey-box Fuzzing for WordPress Plugins**\\
-**Matteo Leonelli**, *David Jannis Dewes*, *Thorsten Holz*\\
+***Matteo Leonelli**, David Jannis Dewes, Thorsten Holz*\\
 IEEE European Symposium on Security and Privacy (EuroS&P)\\
 [[pdf](https://eurosp2026.ieee-security.org/accepted_and_awards.html)], [[code](https://github.com/CISPA-SysSec/themis)]
 
