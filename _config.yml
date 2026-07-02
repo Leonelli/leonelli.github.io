@@ -1,9 +1,11 @@
 title: Matteo Leonelli
-description: Hello! I'm Matteo Leonelli.
+description: Security researcher working on fuzzing, automated testing, and vulnerability discovery.
 show_downloads: false
 google_analytics: false
 theme: jekyll-theme-hacker
-github:
-  zip_url: http://github.com/Leonelli
-  another_url: http://github.com/Leonelli
-  repository_url: /CV_Leonelli_Matteo.pdf
+
+email: matteoleonelli99@gmail.com
+linkedin_url: https://www.linkedin.com/in/matteoleonelli/
+scholar_url: https://scholar.google.com/citations?user=3VYW2DwAAAAJ
+github_url: http://github.com/Leonelli
+resume_url: /CV_Leonelli_Matteo.pdf

@@ -4,6 +4,7 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
 
@@ -12,27 +13,36 @@
 
   <body>
 
-    <header>
-      <div class="container">
-        <a id="a-title" href="{{ '/' | relative_url }}">
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
-        </a>
-        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
+    <div class="page">
 
-        <section id="downloads">
-          {% if site.show_downloads %}
-            <a href="{{ site.github.zip_url }}" class="btn">Download as .zip</a>
-            <a href="{{ site.github.tar_url }}" class="btn">Download as .tar.gz</a>
-          {% endif %}
-          <a href="{{ site.github.repository_url }}" class="btn btn-resume"><span class="icon"></span>Resume</a>
-        </section>
-      </div>
-    </header>
+      <header class="hero">
+        <canvas id="trace" width="1400" height="360" aria-hidden="true"></canvas>
+        <div class="hero-inner">
+          <p class="kicker"><span class="dot">&#9679;</span> Trento, IT&nbsp;&rarr;&nbsp;Saarbr&uuml;cken, DE</p>
+          <h1 class="name">{{ site.title }}</h1>
+          <p class="status-line">
+            <b>PhD Candidate</b><span class="sep">/</span>CISPA Helmholtz Center for Information Security
+            <span class="sep">/</span>advisor: Prof. Dr. Thorsten Holz
+          </p>
+          <p class="hero-lede">
+            Security researcher working on <em>fuzzing</em>, automated testing, and vulnerability
+            discovery &mdash; building tools that find the inputs a program's authors never imagined,
+            and the bugs that follow.
+          </p>
+          <nav class="links-row" aria-label="Contact and profiles">
+            <a href="mailto:{{ site.email }}">Email <span class="arrow">&#8599;</span></a>
+            <a href="{{ site.linkedin_url }}" target="_blank" rel="noopener">LinkedIn <span class="arrow">&#8599;</span></a>
+            <a href="{{ site.scholar_url }}" target="_blank" rel="noopener">Scholar <span class="arrow">&#8599;</span></a>
+            <a href="{{ site.github_url }}" target="_blank" rel="noopener">GitHub <span class="arrow">&#8599;</span></a>
+            <a href="{{ site.resume_url | relative_url }}">R&eacute;sum&eacute; <span class="arrow">&#8595;</span></a>
+          </nav>
+        </div>
+      </header>
 
-    <div class="container">
-      <section id="main_content">
-        {{ content }}
-      </section>
+      {{ content }}
+
     </div>
+
+    <script src="{{ '/assets/js/trace.js' | relative_url }}" defer></script>
   </body>
 </html>
