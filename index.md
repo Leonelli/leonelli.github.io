@@ -30,7 +30,7 @@ layout: default
   <div class="pub-year">2025</div>
   <div class="pub">
     <p class="pub-title">SBFT Tool Competition 2025 – Fuzzing Track</p>
-    <p class="pub-authors">Addison Crump, <b>Matteo Leonelli</b>, Sahil Sihag</p>
+    <p class="pub-authors">Addison Crump, Sahil Sihag, <b>Matteo Leonelli</b></p>
     <p class="pub-venue">Workshop on Search-Based and Fuzz Testing (SBFT)</p>
     <p class="pub-refs">
       <a href="https://conf.researchr.org/details/icse-2025/sbft-2025-papers/20/SBFT-Tool-Competition-2025-Fuzzing-Track" target="_blank" rel="noopener">[pdf]</a>
@@ -197,5 +197,5 @@ layout: default
     <a href="https://scholar.google.com/citations?user=3VYW2DwAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
     <a href="http://github.com/Leonelli" target="_blank" rel="noopener">github.com/Leonelli</a>
   </nav>
-  <p class="colophon">matteoleonelli.dev</p>
+  <p class="colophon">leonelli.github.io</p>
 </footer>
