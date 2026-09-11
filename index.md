@@ -99,6 +99,12 @@ layout: default
       <p class="desc">Research resulting in the CODASPY'21 paper on secure pull printing with QR codes and national eID cards.</p>
     </li>
     <li>
+      <span class="when">May 2021 — Aug 2021</span>
+      <p class="what">IoT Security Risk Assessment — CySec Project</p>
+      <p class="where">Bitahoy, Saarbrücken</p>
+      <p class="desc">Assessed IoT device security using Wireshark to capture and analyze network traffic for malicious payloads, and built infrastructure to automatically cluster and flag suspicious activity in network logs.</p>
+    </li>
+    <li>
       <span class="when">Feb 2019 — Dec 2020</span>
       <p class="what">Junior Researcher</p>
       <p class="where">Fondazione Bruno Kessler, Trento</p>
@@ -200,6 +206,46 @@ layout: default
     <span class="tag cve">CVE-2023-7306</span>
     <div class="adv-body">
       <a class="adv-title" href="https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/nmedia-user-file-uploader/frontend-file-manager-215-missing-authorixation-to-unauthenticated-arbitrary-post-deletion" target="_blank" rel="noopener">Frontend File Manager — unauthenticated arbitrary post deletion</a>
+    </div>
+  </div>
+
+  <div class="advisory">
+    <span class="tag reported">Reported</span>
+    <div class="adv-body">
+      <a class="adv-title" href="https://www.ndss-symposium.org/wp-content/uploads/2025-526-paper.pdf" target="_blank" rel="noopener">Firefox — cross-tab information leak via hardware-accelerated video decoding</a>
+      <span class="adv-sub">Confirmed by Mozilla · found with TwinFuzz</span>
+    </div>
+  </div>
+
+  <div class="advisory">
+    <span class="tag reported">Reported</span>
+    <div class="adv-body">
+      <a class="adv-title" href="https://www.ndss-symposium.org/wp-content/uploads/2025-526-paper.pdf" target="_blank" rel="noopener">VLC media player — crash via Direct3D11 interaction on hardware-accelerated decoding</a>
+      <span class="adv-sub">Found with TwinFuzz</span>
+    </div>
+  </div>
+
+  <div class="advisory">
+    <span class="tag reported">Reported</span>
+    <div class="adv-body">
+      <a class="adv-title" href="https://cispa.de/en/themis" target="_blank" rel="noopener">Modern Events Calendar — arbitrary option update &amp; local file inclusion</a>
+      <span class="adv-sub">100,000+ installs · found with THEMIS</span>
+    </div>
+  </div>
+
+  <div class="advisory">
+    <span class="tag reported">Reported</span>
+    <div class="adv-body">
+      <a class="adv-title" href="https://cispa.de/en/themis" target="_blank" rel="noopener">rtMedia for WordPress — local file inclusion</a>
+      <span class="adv-sub">10,000+ installs · found with THEMIS</span>
+    </div>
+  </div>
+
+  <div class="advisory">
+    <span class="tag reported">Reported</span>
+    <div class="adv-body">
+      <a class="adv-title" href="https://cispa.de/en/themis" target="_blank" rel="noopener">URL Shortener Plugin — SQL injection, SSRF, arbitrary file access &amp; PHP object injection</a>
+      <span class="adv-sub">found with THEMIS</span>
     </div>
   </div>
 </section>
