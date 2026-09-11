@@ -167,31 +167,10 @@ layout: default
   <p class="eyebrow">Achievements &amp; CVEs</p>
 
   <div class="advisory">
-    <span class="tag cve">CVE-2024-23919</span>
-    <div class="adv-body">
-      <a class="adv-title" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23919" target="_blank" rel="noopener">Improper buffer restrictions in Intel® Graphics software</a>
-      <span class="adv-sub"><a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01132.html" target="_blank" rel="noopener">Intel Acknowledgements →</a></span>
-    </div>
-  </div>
-
-  <div class="advisory">
-    <span class="tag confirmed">Confirmed</span>
-    <div class="adv-body">
-      <a class="adv-title" href="https://patchwork.ffmpeg.org/project/ffmpeg/patch/20231130122853.26758-1-michael@niedermayer.cc/" target="_blank" rel="noopener">FFmpeg: global buffer overflow</a>
-    </div>
-  </div>
-
-  <div class="advisory">
-    <span class="tag confirmed">Confirmed</span>
-    <div class="adv-body">
-      <a class="adv-title" href="https://patchwork.ffmpeg.org/project/ffmpeg/patch/20240206212640.9193-1-jamrial@gmail.com/" target="_blank" rel="noopener">FFmpeg: free attempted on address that was never malloc'ed</a>
-    </div>
-  </div>
-
-  <div class="advisory">
     <span class="tag cve">CVE-2025-9219</span>
     <div class="adv-body">
       <a class="adv-title" href="https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/post-smtp/post-smtp-341-missing-authorization-to-authenticated-subscriber-limited-plugin-option-update" target="_blank" rel="noopener">Post SMTP — missing authorization to authenticated subscriber</a>
+      <span class="adv-sub">2025</span>
     </div>
   </div>
 
@@ -199,29 +178,7 @@ layout: default
     <span class="tag cve">CVE-2025-5701</span>
     <div class="adv-body">
       <a class="adv-title" href="https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/hypercomments/hypercomments-122-unauthenticated-subscriber-arbitrary-options-update" target="_blank" rel="noopener">HyperComments — unauthenticated arbitrary options update</a>
-    </div>
-  </div>
-
-  <div class="advisory">
-    <span class="tag cve">CVE-2023-7306</span>
-    <div class="adv-body">
-      <a class="adv-title" href="https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/nmedia-user-file-uploader/frontend-file-manager-215-missing-authorixation-to-unauthenticated-arbitrary-post-deletion" target="_blank" rel="noopener">Frontend File Manager — unauthenticated arbitrary post deletion</a>
-    </div>
-  </div>
-
-  <div class="advisory">
-    <span class="tag confirmed">Confirmed</span>
-    <div class="adv-body">
-      <a class="adv-title" href="https://www.ndss-symposium.org/wp-content/uploads/2025-526-paper.pdf" target="_blank" rel="noopener">Firefox — cross-tab information leak via hardware-accelerated video decoding</a>
-      <span class="adv-sub">Confirmed by Mozilla · found with TwinFuzz</span>
-    </div>
-  </div>
-
-  <div class="advisory">
-    <span class="tag reported">Reported</span>
-    <div class="adv-body">
-      <a class="adv-title" href="https://www.ndss-symposium.org/wp-content/uploads/2025-526-paper.pdf" target="_blank" rel="noopener">VLC media player — crash via Direct3D11 interaction on hardware-accelerated decoding</a>
-      <span class="adv-sub">Found with TwinFuzz</span>
+      <span class="adv-sub">2025</span>
     </div>
   </div>
 
@@ -229,7 +186,7 @@ layout: default
     <span class="tag reported">Reported</span>
     <div class="adv-body">
       <a class="adv-title" href="https://cispa.de/en/themis" target="_blank" rel="noopener">Modern Events Calendar — arbitrary option update &amp; local file inclusion</a>
-      <span class="adv-sub">100,000+ installs · found with THEMIS</span>
+      <span class="adv-sub">2025 · 100,000+ installs · found with THEMIS</span>
     </div>
   </div>
 
@@ -237,7 +194,7 @@ layout: default
     <span class="tag reported">Reported</span>
     <div class="adv-body">
       <a class="adv-title" href="https://cispa.de/en/themis" target="_blank" rel="noopener">rtMedia for WordPress — local file inclusion</a>
-      <span class="adv-sub">10,000+ installs · found with THEMIS</span>
+      <span class="adv-sub">2025 · 10,000+ installs · found with THEMIS</span>
     </div>
   </div>
 
@@ -245,7 +202,55 @@ layout: default
     <span class="tag reported">Reported</span>
     <div class="adv-body">
       <a class="adv-title" href="https://cispa.de/en/themis" target="_blank" rel="noopener">URL Shortener Plugin — SQL injection, SSRF, arbitrary file access &amp; PHP object injection</a>
-      <span class="adv-sub">found with THEMIS</span>
+      <span class="adv-sub">2025 · found with THEMIS</span>
+    </div>
+  </div>
+
+  <div class="advisory">
+    <span class="tag cve">CVE-2024-23919</span>
+    <div class="adv-body">
+      <a class="adv-title" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23919" target="_blank" rel="noopener">Improper buffer restrictions in Intel® Graphics software</a>
+      <span class="adv-sub">2024 · <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01132.html" target="_blank" rel="noopener">Intel Acknowledgements →</a></span>
+    </div>
+  </div>
+
+  <div class="advisory">
+    <span class="tag confirmed">Confirmed</span>
+    <div class="adv-body">
+      <a class="adv-title" href="https://patchwork.ffmpeg.org/project/ffmpeg/patch/20240206212640.9193-1-jamrial@gmail.com/" target="_blank" rel="noopener">FFmpeg: free attempted on address that was never malloc'ed</a>
+      <span class="adv-sub">2024</span>
+    </div>
+  </div>
+
+  <div class="advisory">
+    <span class="tag confirmed">Confirmed</span>
+    <div class="adv-body">
+      <a class="adv-title" href="https://www.ndss-symposium.org/wp-content/uploads/2025-526-paper.pdf" target="_blank" rel="noopener">Firefox — cross-tab information leak via hardware-accelerated video decoding</a>
+      <span class="adv-sub">2024 · Confirmed by Mozilla · found with TwinFuzz</span>
+    </div>
+  </div>
+
+  <div class="advisory">
+    <span class="tag reported">Reported</span>
+    <div class="adv-body">
+      <a class="adv-title" href="https://www.ndss-symposium.org/wp-content/uploads/2025-526-paper.pdf" target="_blank" rel="noopener">VLC media player — crash via Direct3D11 interaction on hardware-accelerated decoding</a>
+      <span class="adv-sub">2024 · found with TwinFuzz</span>
+    </div>
+  </div>
+
+  <div class="advisory">
+    <span class="tag cve">CVE-2023-7306</span>
+    <div class="adv-body">
+      <a class="adv-title" href="https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/nmedia-user-file-uploader/frontend-file-manager-215-missing-authorixation-to-unauthenticated-arbitrary-post-deletion" target="_blank" rel="noopener">Frontend File Manager — unauthenticated arbitrary post deletion</a>
+      <span class="adv-sub">2023</span>
+    </div>
+  </div>
+
+  <div class="advisory">
+    <span class="tag confirmed">Confirmed</span>
+    <div class="adv-body">
+      <a class="adv-title" href="https://patchwork.ffmpeg.org/project/ffmpeg/patch/20231130122853.26758-1-michael@niedermayer.cc/" target="_blank" rel="noopener">FFmpeg: global buffer overflow</a>
+      <span class="adv-sub">2023</span>
     </div>
   </div>
 </section>
@@ -306,7 +311,7 @@ layout: default
       <div class="row">
         <span class="when">2024</span>
         <p class="what"><a href="https://suri.epfl.ch/?page_id=88" target="_blank" rel="noopener">Attended EPFL Summer School in System Security</a></p>
-        <p class="where">Switzerland</p>
+        <p class="where">Lausanne, Switzerland</p>
       </div>
     </li>
     <li>

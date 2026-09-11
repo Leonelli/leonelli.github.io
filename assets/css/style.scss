@@ -289,7 +289,10 @@ section.block > p:last-child{margin-bottom:0;}
   border-radius:2px;
   white-space:nowrap;
   align-self:start;
+  justify-self:start;
   margin-top:2px;
+  min-width:122px;
+  text-align:center;
 }
 .tag.cve{background:rgba(255,138,61,.12); color:var(--signal); border:1px solid rgba(255,138,61,.3);}
 .tag.reported, .tag.confirmed{background:rgba(130,179,132,.1); color:var(--ok); border:1px solid rgba(130,179,132,.28);}
