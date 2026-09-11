@@ -69,34 +69,64 @@ layout: default
   <p class="eyebrow">Experience</p>
   <ol class="rail">
     <li class="current">
-      <span class="when">2024 — present</span>
+      <span class="when">Mar 2024 — Present</span>
       <p class="what">Ph.D. Candidate</p>
-      <p class="where">CISPA Helmholtz Center for Information Security</p>
-      <p class="desc">Research on functional and security-focused automated fuzz testing for complex system security.</p>
+      <p class="where">CISPA Helmholtz Center for Information Security, Saarland University</p>
+      <p class="desc">Research on functional and security-focused automated fuzz testing for complex system security, with work published at EuroS&amp;P and NDSS and multiple CVEs discovered in widely-deployed software.</p>
     </li>
     <li>
-      <span class="when">2025</span>
+      <span class="when">Sep 2025 — Nov 2025</span>
       <p class="what">Applied Scientist Intern</p>
-      <p class="where">Amazon Web Services (AWS)</p>
-      <p class="desc">Researched and developed automated fuzz testing methods to evaluate and ensure data integrity in Amazon S3.</p>
+      <p class="where">Amazon Web Services (AWS), Paris</p>
+      <p class="desc">Designed and implemented automated fuzz testing pipelines to evaluate and ensure data integrity in Amazon S3, applying grey-box fuzzing techniques to large-scale distributed cloud storage infrastructure.</p>
     </li>
     <li>
-      <span class="when">2021 — 2024</span>
-      <p class="what">Researcher</p>
-      <p class="where">Fondazione Bruno Kessler</p>
-      <p class="desc">Research on secure protocol communication and contributions to application development.</p>
+      <span class="when">Apr 2022 — Mar 2024</span>
+      <p class="what">Research Assistant</p>
+      <p class="where">CISPA Helmholtz Center for Information Security, Saarland University</p>
+      <p class="desc">Collaborated with Ph.D. researchers on automated root cause analysis of fuzzer-discovered bugs and on LLM-driven automatic fuzzing harness generation.</p>
     </li>
     <li>
-      <span class="when">2019 — 2021</span>
-      <p class="what">Developer</p>
-      <p class="where">Matrix Tech</p>
-      <p class="desc">Built a web service to manage gate access and presence tracking on embedded system devices.</p>
+      <span class="when">Mar 2023 — Jan 2024</span>
+      <p class="what">Master's Thesis</p>
+      <p class="where">CISPA Helmholtz Center for Information Security, Saarland University</p>
+      <p class="desc">Research on software and hardware fuzzing in collaboration with Intel.</p>
+    </li>
+    <li>
+      <span class="when">May 2021 — Sep 2021</span>
+      <p class="what">Bachelor Thesis</p>
+      <p class="where">Fondazione Bruno Kessler, Trento</p>
+      <p class="desc">Research resulting in the CODASPY'21 paper on secure pull printing with QR codes and national eID cards.</p>
+    </li>
+    <li>
+      <span class="when">Feb 2019 — Dec 2020</span>
+      <p class="what">Junior Researcher</p>
+      <p class="where">Fondazione Bruno Kessler, Trento</p>
+      <p class="desc">Designed authentication protocols using the Italian CIE 3.0 smart card standard.</p>
+    </li>
+    <li>
+      <span class="when">Dec 2017 — Dec 2020</span>
+      <p class="what">Full Stack Developer</p>
+      <p class="where">Matrix Tech, Trento</p>
+      <p class="desc">Developed a full-stack web service for access control and real-time occupancy monitoring, integrated with proprietary embedded hardware.</p>
     </li>
     <li>
       <span class="when">2018 — 2019</span>
       <p class="what">Developer</p>
       <p class="where">OGP</p>
       <p class="desc">Developed customer-facing websites and integrated new features.</p>
+    </li>
+    <li>
+      <span class="when">Nov 2018 — Jan 2019</span>
+      <p class="what">Software Developer Intern</p>
+      <p class="where">Fondazione Bruno Kessler, Security &amp; Trust Lab, Trento</p>
+      <p class="desc">Mobile developer internship focused on secure application development.</p>
+    </li>
+    <li>
+      <span class="when">Jun 2017 — Jul 2017</span>
+      <p class="what">Java Developer Intern</p>
+      <p class="where">Fondazione Bruno Kessler, Smart Community Lab, Trento</p>
+      <p class="desc">Java developer involved in data analysis and software development.</p>
     </li>
   </ol>
 </section>
