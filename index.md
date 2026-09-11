@@ -278,7 +278,7 @@ layout: default
 <section class="block" id="teaching">
   <p class="eyebrow">Teaching</p>
   <ol class="rail">
-    <li class="current">
+    <li>
       <span class="when">2025 — 2026</span>
       <p class="what">Research Assistant Mentor</p>
       <p class="where">CISPA Helmholtz Center for Information Security</p>
