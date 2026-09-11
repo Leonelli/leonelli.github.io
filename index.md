@@ -175,14 +175,14 @@ layout: default
   </div>
 
   <div class="advisory">
-    <span class="tag reported">Reported</span>
+    <span class="tag confirmed">Confirmed</span>
     <div class="adv-body">
       <a class="adv-title" href="https://patchwork.ffmpeg.org/project/ffmpeg/patch/20231130122853.26758-1-michael@niedermayer.cc/" target="_blank" rel="noopener">FFmpeg: global buffer overflow</a>
     </div>
   </div>
 
   <div class="advisory">
-    <span class="tag reported">Reported</span>
+    <span class="tag confirmed">Confirmed</span>
     <div class="adv-body">
       <a class="adv-title" href="https://patchwork.ffmpeg.org/project/ffmpeg/patch/20240206212640.9193-1-jamrial@gmail.com/" target="_blank" rel="noopener">FFmpeg: free attempted on address that was never malloc'ed</a>
     </div>
@@ -210,7 +210,7 @@ layout: default
   </div>
 
   <div class="advisory">
-    <span class="tag reported">Reported</span>
+    <span class="tag confirmed">Confirmed</span>
     <div class="adv-body">
       <a class="adv-title" href="https://www.ndss-symposium.org/wp-content/uploads/2025-526-paper.pdf" target="_blank" rel="noopener">Firefox — cross-tab information leak via hardware-accelerated video decoding</a>
       <span class="adv-sub">Confirmed by Mozilla · found with TwinFuzz</span>
@@ -252,71 +252,97 @@ layout: default
 
 <section class="block" id="misc">
   <p class="eyebrow">Miscellaneous</p>
-  <ol class="rail">
+  <ol class="rail compact">
     <li>
-      <span class="when">2026</span>
-      <p class="what"><a href="https://sp2026.ieee-security.org/" target="_blank" rel="noopener">Attended IEEE S&amp;P</a></p>
-      <p class="where">San Francisco</p>
+      <div class="row">
+        <span class="when">2026</span>
+        <p class="what"><a href="https://sp2026.ieee-security.org/" target="_blank" rel="noopener">Attended IEEE S&amp;P</a></p>
+        <p class="where">San Francisco</p>
+      </div>
     </li>
     <li>
-      <span class="when">2026</span>
-      <p class="what"><a href="https://fuzzingsummerschool.github.io/" target="_blank" rel="noopener">Attended Fuzzing and Software Security Summer School</a></p>
-      <p class="where">Singapore</p>
+      <div class="row">
+        <span class="when">2026</span>
+        <p class="what"><a href="https://fuzzingsummerschool.github.io/" target="_blank" rel="noopener">Attended Fuzzing and Software Security Summer School</a></p>
+        <p class="where">Singapore</p>
+      </div>
     </li>
     <li>
-      <span class="when">2026</span>
-      <p class="what"><a href="https://cispa.de/en/themis" target="_blank" rel="noopener">Invited at CISPA Blog Article: Themis</a></p>
-      <p class="where">CISPA</p>
+      <div class="row">
+        <span class="when">2026</span>
+        <p class="what"><a href="https://cispa.de/en/themis" target="_blank" rel="noopener">Invited at CISPA Blog Article: Themis</a></p>
+        <p class="where">CISPA</p>
+      </div>
     </li>
     <li>
-      <span class="when">2025</span>
-      <p class="what"><a href="https://www.ndss-symposium.org/ndss2025/" target="_blank" rel="noopener">Attended and Presented at NDSS</a></p>
-      <p class="where">San Diego</p>
+      <div class="row">
+        <span class="when">2025</span>
+        <p class="what"><a href="https://www.ndss-symposium.org/ndss2025/" target="_blank" rel="noopener">Attended and Presented at NDSS</a></p>
+        <p class="where">San Diego</p>
+      </div>
     </li>
     <li>
-      <span class="when">2025</span>
-      <p class="what"><a href="https://sbft25.github.io/organisation/" target="_blank" rel="noopener">Organized SBFT Workshop</a></p>
-      <p class="where">ICSE 2025</p>
+      <div class="row">
+        <span class="when">2025</span>
+        <p class="what"><a href="https://sbft25.github.io/organisation/" target="_blank" rel="noopener">Organized SBFT Workshop</a></p>
+        <p class="where">ICSE 2025</p>
+      </div>
     </li>
     <li>
-      <span class="when">2025</span>
-      <p class="what"><a href="https://cispa.de/en/TLDR_41" target="_blank" rel="noopener">Invited at CISPA Podcast Episode — Black Box Testing with Matteo Leonelli</a></p>
-      <p class="where">CISPA</p>
+      <div class="row">
+        <span class="when">2025</span>
+        <p class="what"><a href="https://cispa.de/en/TLDR_41" target="_blank" rel="noopener">Invited at CISPA Podcast Episode — Black Box Testing with Matteo Leonelli</a></p>
+        <p class="where">CISPA</p>
+      </div>
     </li>
     <li>
-      <span class="when">2024</span>
-      <p class="what"><a href="https://www.linkedin.com/pulse/busy-summer-academic-engagements-part-1-research-workshops-jason-fung-zoxic" target="_blank" rel="noopener">Attended and Presented at Intel Workshop: Scalable Assurance</a></p>
-      <p class="where">Portland</p>
+      <div class="row">
+        <span class="when">2024</span>
+        <p class="what"><a href="https://www.linkedin.com/pulse/busy-summer-academic-engagements-part-1-research-workshops-jason-fung-zoxic" target="_blank" rel="noopener">Attended and Presented at Intel Workshop: Scalable Assurance</a></p>
+        <p class="where">Portland</p>
+      </div>
     </li>
     <li>
-      <span class="when">2024</span>
-      <p class="what"><a href="https://suri.epfl.ch/?page_id=88" target="_blank" rel="noopener">Attended EPFL Summer School in System Security</a></p>
-      <p class="where">Switzerland</p>
+      <div class="row">
+        <span class="when">2024</span>
+        <p class="what"><a href="https://suri.epfl.ch/?page_id=88" target="_blank" rel="noopener">Attended EPFL Summer School in System Security</a></p>
+        <p class="where">Switzerland</p>
+      </div>
     </li>
     <li>
-      <span class="when">2023</span>
-      <p class="what"><a href="https://cispa.de/summer-school-2023" target="_blank" rel="noopener">Attended CISPA Summer School in System Security</a></p>
-      <p class="where">Saarland</p>
+      <div class="row">
+        <span class="when">2023</span>
+        <p class="what"><a href="https://cispa.de/summer-school-2023" target="_blank" rel="noopener">Attended CISPA Summer School in System Security</a></p>
+        <p class="where">Saarland</p>
+      </div>
     </li>
     <li>
-      <span class="when">2022</span>
-      <p class="what"><a href="https://cispa.de/en/summer-school-2022" target="_blank" rel="noopener">Attended CISPA Summer School in Trustworthy Artificial Intelligence</a></p>
-      <p class="where">Saarland</p>
+      <div class="row">
+        <span class="when">2022</span>
+        <p class="what"><a href="https://cispa.de/en/summer-school-2022" target="_blank" rel="noopener">Attended CISPA Summer School in Trustworthy Artificial Intelligence</a></p>
+        <p class="where">Saarland</p>
+      </div>
     </li>
     <li>
-      <span class="when">2021</span>
-      <p class="what"><a href="https://www.soi.unitn.it/" target="_blank" rel="noopener">Attended University of Trento School of Innovation</a></p>
-      <p class="where">Trento</p>
+      <div class="row">
+        <span class="when">2021</span>
+        <p class="what"><a href="https://www.soi.unitn.it/" target="_blank" rel="noopener">Attended University of Trento School of Innovation</a></p>
+        <p class="where">Trento</p>
+      </div>
     </li>
     <li>
-      <span class="when">2019</span>
-      <p class="what"><a href="https://fbkjunior.fbk.eu/prom-camp-2019/" target="_blank" rel="noopener">Organized ProM Camp</a></p>
-      <p class="where">Trento</p>
+      <div class="row">
+        <span class="when">2019</span>
+        <p class="what"><a href="https://fbkjunior.fbk.eu/prom-camp-2019/" target="_blank" rel="noopener">Organized ProM Camp</a></p>
+        <p class="where">Trento</p>
+      </div>
     </li>
     <li>
-      <span class="when">2018</span>
-      <p class="what"><a href="https://fbkjunior.fbk.eu/prom-camp-2018/" target="_blank" rel="noopener">Attended ProM Camp</a></p>
-      <p class="where">Trento</p>
+      <div class="row">
+        <span class="when">2018</span>
+        <p class="what"><a href="https://fbkjunior.fbk.eu/prom-camp-2018/" target="_blank" rel="noopener">Attended ProM Camp</a></p>
+        <p class="where">Trento</p>
+      </div>
     </li>
   </ol>
 </section>

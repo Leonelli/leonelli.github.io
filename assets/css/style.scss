@@ -212,6 +212,21 @@ section.block > p:last-child{margin-bottom:0;}
   margin:0;
 }
 
+/* ---------- compact rail (dense one-line entries, e.g. Miscellaneous) ---------- */
+
+.rail.compact li{padding:9px 0 9px 26px;}
+.rail.compact li::before{top:11px;}
+.rail.compact .row{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  column-gap:12px;
+  row-gap:2px;
+}
+.rail.compact .when{margin-bottom:0; flex:0 0 auto;}
+.rail.compact .what{margin:0; font-size:15px; font-weight:500; flex:1 1 260px;}
+.rail.compact .where{margin:0; flex:0 0 auto;}
+
 /* ---------- publications ---------- */
 
 .pub-year{
@@ -277,7 +292,7 @@ section.block > p:last-child{margin-bottom:0;}
   margin-top:2px;
 }
 .tag.cve{background:rgba(255,138,61,.12); color:var(--signal); border:1px solid rgba(255,138,61,.3);}
-.tag.reported{background:rgba(130,179,132,.1); color:var(--ok); border:1px solid rgba(130,179,132,.28);}
+.tag.reported, .tag.confirmed{background:rgba(130,179,132,.1); color:var(--ok); border:1px solid rgba(130,179,132,.28);}
 .advisory .adv-body{min-width:0;}
 .advisory .adv-title{
   font-size:15.5px;
