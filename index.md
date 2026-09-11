@@ -174,17 +174,34 @@ layout: default
   </div>
 </section>
 
-<section class="block" id="talks">
-  <p class="eyebrow">Talks &amp; Summer Schools</p>
+<section class="block" id="misc">
+  <p class="eyebrow">Miscellaneous</p>
   <ul class="plain">
-    <li><a href="https://fuzzingsummerschool.github.io/" target="_blank" rel="noopener">Fuzzing and Software Security Summer School</a> — 2026</li>
-    <li><a href="https://cispa.de/en/TLDR_41" target="_blank" rel="noopener">CISPA Podcast — Black Box Testing with Matteo Leonelli</a> — 2025</li>
-    <li><a href="https://sbft25.github.io/organisation/" target="_blank" rel="noopener">SBFT 2025</a> — organising committee</li>
-    <li><a href="https://www.linkedin.com/pulse/busy-summer-academic-engagements-part-1-research-workshops-jason-fung-zoxic" target="_blank" rel="noopener">Intel Workshop: Scalable Assurance</a> — 2024</li>
-    <li><a href="https://suri.epfl.ch/?page_id=88" target="_blank" rel="noopener">EPFL Summer School in System Security</a> — 2024</li>
-    <li><a href="https://cispa.de/summer-school-2023" target="_blank" rel="noopener">CISPA Summer School in System Security</a> — 2023</li>
-    <li><a href="https://cispa.de/en/summer-school-2022" target="_blank" rel="noopener">CISPA Summer School in Trustworthy Artificial Intelligence</a> — 2022</li>
-    <li><a href="https://www.soi.unitn.it/" target="_blank" rel="noopener">University of Trento School of Innovation</a> — 2021</li>
+    <li><a href="https://cispa.de/en/themis" target="_blank" rel="noopener">Invited at CISPA Blog Article Themis</a> — 2026</li>
+    <li><a href="https://fuzzingsummerschool.github.io/" target="_blank" rel="noopener">Attended Fuzzing and Software Security Summer School</a> — 2026 — Singapore</li>
+    <li><a href="https://sp2026.ieee-security.org/" target="_blank" rel="noopener">Attended IEEE S&amp;P</a> — 2026 — San Francisco</li>
+    <li><a href="https://cispa.de/en/TLDR_41" target="_blank" rel="noopener">Invited at CISPA Podcast Episode — Black Box Testing with Matteo Leonelli</a> — 2025</li>
+    <li><a href="https://sbft25.github.io/organisation/" target="_blank" rel="noopener">Organized SBFT Workshop</a> — 2025</li>
+    <li><a href="https://www.ndss-symposium.org/ndss2025/" target="_blank" rel="noopener">Attended and Presented at NDSS</a> — 2025 — San Francisco</li>
+    <li><a href="https://www.linkedin.com/pulse/busy-summer-academic-engagements-part-1-research-workshops-jason-fung-zoxic" target="_blank" rel="noopener">Attended and Presented at Intel Workshop: Scalable Assurance</a> — 2024 — Portland</li>
+    <li><a href="https://suri.epfl.ch/?page_id=88" target="_blank" rel="noopener">Attended EPFL Summer School in System Security</a> — 2024 — Switzerland</li>
+    <li><a href="https://cispa.de/summer-school-2023" target="_blank" rel="noopener">Attended CISPA Summer School in System Security</a> — 2023 — Saarland</li>
+    <li><a href="https://cispa.de/en/summer-school-2022" target="_blank" rel="noopener">Attended CISPA Summer School in Trustworthy Artificial Intelligence</a> — 2022 — Saarland</li>
+    <li><a href="https://www.soi.unitn.it/" target="_blank" rel="noopener">Attended University of Trento School of Innovation</a> — 2021 — Trento</li>
+    <li><a href="https://fbkjunior.fbk.eu/prom-camp-2019/" target="_blank" rel="noopener">Organized ProM Camp</a> — 2019 — Trento</li>
+    <li><a href="https://fbkjunior.fbk.eu/prom-camp-2018/" target="_blank" rel="noopener">Attended ProM Camp</a> — 2018 — Trento</li>
+  </ul>
+</section>
+
+<section class="block" id="teaching">
+  <p class="eyebrow">Teaching</p>
+  <ul class="plain">
+    <li>Mentored a student as Research Assistant — CISPA 2025/2026</li>
+    <li>Supervised a Bachelor's thesis — CISPA 2025</li>
+    <li>Teaching Assistant in System Security class — CISPA 2024</li>
+    <li>Teaching Assistant in Security — University of Saarland 2023</li>
+    <li>Teaching Assistant in Human Computer Interaction class — University of Saarland 2023</li>
+    <li>Teaching Assistant in Programming 1 class — University of Trento 2021</li>
   </ul>
 </section>
 
