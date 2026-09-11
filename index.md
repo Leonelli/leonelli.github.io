@@ -261,6 +261,13 @@ layout: default
     <li>
       <div class="row">
         <span class="when">2026</span>
+        <p class="what"><a href="https://eurosp2026.ieee-security.org/" target="_blank" rel="noopener">Attended and Presented at IEEE EuroS&amp;P</a></p>
+        <p class="where">Lisbon</p>
+      </div>
+    </li>
+    <li>
+      <div class="row">
+        <span class="when">2026</span>
         <p class="what"><a href="https://sp2026.ieee-security.org/" target="_blank" rel="noopener">Attended IEEE S&amp;P</a></p>
         <p class="where">San Francisco</p>
       </div>
