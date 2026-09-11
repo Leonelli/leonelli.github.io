@@ -225,7 +225,7 @@ layout: default
     <li>
       <span class="when">2025</span>
       <p class="what"><a href="https://www.ndss-symposium.org/ndss2025/" target="_blank" rel="noopener">Attended and Presented at NDSS</a></p>
-      <p class="where">San Francisco</p>
+      <p class="where">San Diego</p>
     </li>
     <li>
       <span class="when">2025</span>
@@ -313,7 +313,6 @@ layout: default
 
 <footer>
   <p class="eyebrow">Contact</p>
-  <p class="sign">Let's break something else together.</p>
   <nav class="foot-links">
     <a href="mailto:matteoleonelli99@gmail.com">matteoleonelli99@gmail.com</a>
     <a href="https://www.linkedin.com/in/matteoleonelli/" target="_blank" rel="noopener">linkedin.com/in/matteoleonelli</a>
